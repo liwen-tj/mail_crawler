@@ -1,0 +1,2157 @@
+{
+    "asf-wide": [
+        "announce",
+        "apache-bugdb",
+        "apachecon-discuss",
+        "builds",
+        "community",
+        "diversity",
+        "feathercast",
+        "geospatial",
+        "gui-dev",
+        "history",
+        "infrastructure-dev",
+        "iot",
+        "jcp-open",
+        "legal-discuss",
+        "marketing",
+        "mirrors",
+        "modproxy-dev",
+        "privacy-discuss",
+        "release-discuss",
+        "repository",
+        "repository-commits",
+        "retreats",
+        "site-dev",
+        "small-events-discuss",
+        "women"
+    ],
+    "abdera": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "accumulo": [
+        "commits",
+        "dev",
+        "notifications",
+        "user"
+    ],
+    "ace": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "activemq": [
+        "commits",
+        "dev",
+        "gitbox",
+        "issues",
+        "users"
+    ],
+    "age": [
+        "commits",
+        "dev"
+    ],
+    "airavata": [
+        "architecture",
+        "commits",
+        "custos",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "airflow": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "allura": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "amaterasu": [
+        "commits",
+        "dev"
+    ],
+    "ambari": [
+        "commits",
+        "dev",
+        "issues",
+        "reviews",
+        "user"
+    ],
+    "amber": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "annotator": [
+        "commits",
+        "dev"
+    ],
+    "ant": [
+        "dev",
+        "ivy-user",
+        "notifications",
+        "user"
+    ],
+    "any23": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "apex": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "apisix": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "apr": [
+        "bugs",
+        "commits",
+        "dev"
+    ],
+    "archiva": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "users"
+    ],
+    "archive": [
+        "apr-serf-dev",
+        "httpd-pop3-dev",
+        "license"
+    ],
+    "ariatosca": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "aries": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "arrow": [
+        "commits",
+        "dev",
+        "github",
+        "issues",
+        "jira",
+        "user"
+    ],
+    "asterixdb": [
+        "commits",
+        "dev",
+        "notifications",
+        "users"
+    ],
+    "atlas": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "attic": [
+        "general"
+    ],
+    "aurora": [
+        "announcements",
+        "commits",
+        "dev",
+        "issues",
+        "reviews",
+        "user"
+    ],
+    "avalon": [
+        "apps-dev",
+        "cvs",
+        "dev",
+        "phoenix-dev"
+    ],
+    "avro": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "axis": [
+        "axis1-c-user",
+        "axis1-java-user",
+        "c-commits",
+        "c-dev",
+        "c-user",
+        "general",
+        "java-commits",
+        "java-dev",
+        "java-user",
+        "java-user-ja"
+    ],
+    "bahir": [
+        "commits",
+        "dev",
+        "reviews",
+        "user"
+    ],
+    "batchee": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "beam": [
+        "builds",
+        "commits",
+        "dev",
+        "github",
+        "issues",
+        "user"
+    ],
+    "beehive": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "bigtop": [
+        "announce",
+        "ci",
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "bloodhound": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "bluemarlin": [
+        "dev"
+    ],
+    "bookkeeper": [
+        "commits",
+        "dev",
+        "distributedlog-commits",
+        "distributedlog-dev",
+        "distributedlog-issues",
+        "distributedlog-user",
+        "issues",
+        "user"
+    ],
+    "brooklyn": [
+        "commits",
+        "dev"
+    ],
+    "brpc": [
+        "dev"
+    ],
+    "buildr": [
+        "ci",
+        "commits",
+        "dev",
+        "users"
+    ],
+    "buildstream": [
+        "dev"
+    ],
+    "bval": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "calcite": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "camel": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "carbondata": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "cassandra": [
+        "builds",
+        "client-dev",
+        "commits",
+        "dev",
+        "gsod2019",
+        "pr",
+        "user"
+    ],
+    "cayenne": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "celix": [
+        "commits",
+        "dev"
+    ],
+    "chemistry": [
+        "commits",
+        "dev"
+    ],
+    "chukwa": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "clerezza": [
+        "commits",
+        "dev"
+    ],
+    "click": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "climate": [
+        "commits",
+        "dev"
+    ],
+    "cloudstack": [
+        "announce",
+        "commits",
+        "dev",
+        "issues",
+        "marketing",
+        "users",
+        "users-cn"
+    ],
+    "cmda": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "cocoon": [
+        "cvs",
+        "dev",
+        "docs",
+        "users",
+        "users-fr"
+    ],
+    "commons": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "user"
+    ],
+    "commonsrdf": [
+        "commits",
+        "dev"
+    ],
+    "community": [
+        "commits",
+        "dev",
+        "students"
+    ],
+    "concerted": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "continuum": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "users"
+    ],
+    "cordova": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "corinthia": [
+        "commits",
+        "dev"
+    ],
+    "cotton": [
+        "dev"
+    ],
+    "couchdb": [
+        "announce",
+        "commits",
+        "couchapp",
+        "design",
+        "dev",
+        "erlang",
+        "l10n",
+        "marketing",
+        "notifications",
+        "replication",
+        "user",
+        "www"
+    ],
+    "crail": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "creadur": [
+        "commits",
+        "dev"
+    ],
+    "crunch": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "ctakes": [
+        "commits",
+        "dev",
+        "notifications",
+        "user"
+    ],
+    "curator": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "cxf": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "users"
+    ],
+    "daffodil": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "datafu": [
+        "commits",
+        "dev"
+    ],
+    "datasketches": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "db": [
+        "axion-dev",
+        "axion-user",
+        "commons-dev",
+        "commons-user",
+        "ddlutils-dev",
+        "ddlutils-user",
+        "derby-commits",
+        "derby-dev",
+        "derby-user",
+        "general",
+        "jdo-commits",
+        "jdo-dev",
+        "jdo-user",
+        "ojb-dev",
+        "ojb-user",
+        "torque-dev",
+        "torque-user"
+    ],
+    "deltacloud": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "deltaspike": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "devicemap": [
+        "commits",
+        "dev"
+    ],
+    "directmemory": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "directory": [
+        "alliance",
+        "api",
+        "commits",
+        "dev",
+        "fortress",
+        "kerby",
+        "notifications",
+        "scimple",
+        "users"
+    ],
+    "diversity": [
+        "dev"
+    ],
+    "dlab": [
+        "commits",
+        "dev"
+    ],
+    "dolphinscheduler": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "doris": [
+        "commits",
+        "dev"
+    ],
+    "drat": [
+        "commits",
+        "dev"
+    ],
+    "drill": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "druid": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "dubbo": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications"
+    ],
+    "eagle": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "echarts": [
+        "commits",
+        "dev"
+    ],
+    "edgent": [
+        "commits",
+        "dev"
+    ],
+    "empire": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "esme": [
+        "commits",
+        "dev"
+    ],
+    "etch": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "excalibur": [
+        "dev",
+        "scm",
+        "user"
+    ],
+    "falcon": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "felix": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "fineract": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "flagon": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "flex": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "flink": [
+        "builds",
+        "commits",
+        "community",
+        "dev",
+        "issues",
+        "news",
+        "user",
+        "user-zh"
+    ],
+    "flume": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "fluo": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "forrest": [
+        "dev",
+        "site-svn",
+        "svn",
+        "user"
+    ],
+    "freemarker": [
+        "dev",
+        "notifications"
+    ],
+    "gearpump": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "geode": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "user"
+    ],
+    "geronimo": [
+        "dev",
+        "scm",
+        "user",
+        "xbean-dev",
+        "xbean-scm",
+        "xbean-user"
+    ],
+    "giraph": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "gobblin": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "gora": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "gossip": [
+        "commits",
+        "dev"
+    ],
+    "griffin": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "groovy": [
+        "commits",
+        "dev",
+        "notifications",
+        "users"
+    ],
+    "guacamole": [
+        "announce",
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "gump": [
+        "commits",
+        "general"
+    ],
+    "hadoop": [
+        "common-commits",
+        "common-dev",
+        "common-issues",
+        "common-user",
+        "dev",
+        "general",
+        "hdfs-commits",
+        "hdfs-dev",
+        "hdfs-issues",
+        "hdfs-user",
+        "mapreduce-commits",
+        "mapreduce-dev",
+        "mapreduce-issues",
+        "mapreduce-user",
+        "ozone-commits",
+        "ozone-dev",
+        "ozone-issues",
+        "submarine-dev",
+        "submarine-user",
+        "user",
+        "user-zh",
+        "yarn-commits",
+        "yarn-dev",
+        "yarn-issues"
+    ],
+    "hama": [
+        "commits",
+        "dev",
+        "user",
+        "alerts",
+        "commits",
+        "dev"
+    ],
+    "hawq": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "hbase": [
+        "builds",
+        "commits",
+        "dev",
+        "issues",
+        "user",
+        "user-zh"
+    ],
+    "hc": [
+        "commits",
+        "dev",
+        "httpclient-users"
+    ],
+    "hdt": [
+        "commits",
+        "dev"
+    ],
+    "helix": [
+        "commits",
+        "dev",
+        "reviews",
+        "user"
+    ],
+    "heron": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "hive": [
+        "commits",
+        "dev",
+        "gitbox",
+        "issues",
+        "user"
+    ],
+    "hivemall": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "hivemind": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "horn": [
+        "dev"
+    ],
+    "htrace": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "httpd": [
+        "announce",
+        "apreq-cvs",
+        "apreq-dev",
+        "bugs",
+        "cli-dev",
+        "cli-users",
+        "current-testers",
+        "cvs",
+        "dev",
+        "docs",
+        "docs-bugs",
+        "mbox-dev",
+        "modssl-users",
+        "modules-dev",
+        "notifications",
+        "packagers",
+        "stable-testers",
+        "test-cvs",
+        "test-dev",
+        "testers",
+        "users",
+        "users-de",
+        "wiki-changes",
+        "win32-msi-cvs"
+    ],
+    "hudi": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "ibatis": [
+        "commits",
+        "dev",
+        "user-cs",
+        "user-java"
+    ],
+    "iceberg": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "ignite": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "user"
+    ],
+    "impala": [
+        "commits",
+        "dev",
+        "issues",
+        "issues-all",
+        "reviews",
+        "user"
+    ],
+    "incubator": [
+        "adffaces-commits",
+        "adffaces-dev",
+        "adffaces-issues",
+        "adffaces-user",
+        "agila-commits",
+        "agila-dev",
+        "agila-user",
+        "alois-commits",
+        "alois-dev",
+        "android-interest",
+        "announce",
+        "awf-commits",
+        "awf-dev",
+        "awf-users",
+        "bluesky-commits",
+        "bluesky-dev",
+        "bluesky-user",
+        "blur-commits",
+        "blur-dev",
+        "blur-user",
+        "commits",
+        "composer-commits",
+        "cvs",
+        "depot-cvs",
+        "depot-dev",
+        "dev",
+        "droids-commits",
+        "droids-dev",
+        "easyant-commits",
+        "easyant-dev",
+        "ftpserver-commits",
+        "ftpserver-dev",
+        "general",
+        "graffito-commits",
+        "graffito-dev",
+        "hcatalog-commits",
+        "hcatalog-dev",
+        "hcatalog-user",
+        "heraldry-commits",
+        "heraldry-dev",
+        "heraldry-user",
+        "hise-commits",
+        "hise-dev",
+        "hise-user",
+        "imperius-commits",
+        "imperius-dev",
+        "imperius-user",
+        "ivy-commits",
+        "ivy-dev",
+        "kabuki-commits",
+        "kabuki-dev",
+        "kabuki-user",
+        "kalumet-commits",
+        "kalumet-dev",
+        "kalumet-user",
+        "kato-commits",
+        "kato-dev",
+        "kato-spec",
+        "kitty-dev",
+        "lokahi-commits",
+        "lokahi-dev",
+        "mod_ftp-commits",
+        "mod_ftp-dev",
+        "nmaven-commits",
+        "nmaven-dev",
+        "nmaven-issues",
+        "npanday-commits",
+        "npanday-dev",
+        "npanday-users",
+        "nuvem-commits",
+        "nuvem-dev",
+        "nuvem-user",
+        "odf-commits",
+        "odf-dev",
+        "odf-users",
+        "olio-commits",
+        "olio-dev",
+        "olio-user",
+        "photark-commits",
+        "photark-dev",
+        "photark-user",
+        "projects",
+        "rcf-commits",
+        "rcf-dev",
+        "s4-commits",
+        "s4-dev",
+        "s4-user",
+        "sanselan-commits",
+        "sanselan-dev",
+        "socialsite-dev",
+        "stonehenge-commits",
+        "stonehenge-dev",
+        "tashi-commits",
+        "tashi-dev",
+        "tashi-user",
+        "triplesoup-commits",
+        "triplesoup-dev",
+        "user",
+        "wadi-commits",
+        "wadi-dev",
+        "wadi-user",
+        "wave-commits",
+        "wave-dev",
+        "xap-commits",
+        "xap-dev",
+        "xap-user",
+        "yoko-commits",
+        "yoko-dev",
+        "yoko-user",
+        "zeta-commits",
+        "zeta-dev",
+        "zeta-issues",
+        "zeta-users"
+    ],
+    "infra": [
+        "gnomes",
+        "hadoop-migrations",
+        "issues"
+    ],
+    "iota": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "iotdb": [
+        "commits",
+        "dev",
+        "notifications",
+        "reviews"
+    ],
+    "isis": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "jackrabbit": [
+        "announce",
+        "commits",
+        "dev",
+        "oak-commits",
+        "oak-dev",
+        "oak-issues",
+        "users"
+    ],
+    "jakarta": [
+        "alexandria-dev",
+        "alexandria-user",
+        "announcements",
+        "bcel-dev",
+        "bcel-user",
+        "bsf-dev",
+        "bsf-user",
+        "cactus-dev",
+        "cactus-user",
+        "dev",
+        "docs",
+        "ecs-dev",
+        "ecs-user",
+        "general",
+        "jcs-dev",
+        "jcs-users",
+        "jmeter-dev",
+        "library-dev",
+        "log4j-cvs",
+        "notifications",
+        "oro-dev",
+        "oro-user",
+        "regexp-dev",
+        "regexp-user",
+        "servletapi-dev",
+        "site-cvs",
+        "slide-dev",
+        "slide-user",
+        "taglibs-dev",
+        "watchdog-dev"
+    ],
+    "james": [
+        "general",
+        "mailet-api",
+        "mime4j-dev",
+        "notifications",
+        "server-dev",
+        "server-user",
+        "site-dev"
+    ],
+    "jclouds": [
+        "commits",
+        "dev",
+        "notifications",
+        "user"
+    ],
+    "jena": [
+        "commits",
+        "dev",
+        "pr",
+        "users"
+    ],
+    "jmeter": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "johnzon": [
+        "commits",
+        "dev"
+    ],
+    "joshua": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "jspwiki": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "juddi": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "juneau": [
+        "commits",
+        "dev"
+    ],
+    "kafka": [
+        "commits",
+        "dev",
+        "jira",
+        "users"
+    ],
+    "karaf": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "kibble": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "knox": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "kudu": [
+        "builds",
+        "commits",
+        "dev",
+        "issues",
+        "reviews",
+        "user"
+    ],
+    "kylin": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "labs": [
+        "commits",
+        "labs",
+        "tech"
+    ],
+    "lens": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "lenya": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "libcloud": [
+        "announce",
+        "dev",
+        "notifications",
+        "users"
+    ],
+    "liminal": [
+        "dev"
+    ],
+    "livy": [
+        "commits",
+        "dev",
+        "issues",
+        "reviews",
+        "user"
+    ],
+    "logging": [
+        "commits",
+        "dev",
+        "general",
+        "log4cxx-dev",
+        "log4cxx-user",
+        "log4j-dev",
+        "log4j-user",
+        "log4net-dev",
+        "log4net-user",
+        "log4php-dev",
+        "log4php-user",
+        "notifications"
+    ],
+    "lucene": [
+        "builds",
+        "c-commits",
+        "c-dev",
+        "commits",
+        "dev",
+        "general",
+        "issues",
+        "java-commits",
+        "java-user",
+        "nutch-general",
+        "openrelevance-dev",
+        "openrelevance-user",
+        "pylucene-commits",
+        "pylucene-dev",
+        "ruby-dev",
+        "solr-commits",
+        "solr-dev",
+        "solr-user"
+    ],
+    "lucenenet": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "lucy": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "madlib": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "mahout": [
+        "commits",
+        "dev",
+        "general",
+        "issues",
+        "user"
+    ],
+    "manifoldcf": [
+        "commits",
+        "dev",
+        "general",
+        "user"
+    ],
+    "marmotta": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "marvin": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications"
+    ],
+    "maven": [
+        "announce",
+        "commits",
+        "dev",
+        "doxia-commits",
+        "doxia-dev",
+        "doxia-users",
+        "issues",
+        "m2-dev",
+        "notifications",
+        "repo-maintainers",
+        "scm-commits",
+        "scm-dev",
+        "scm-users",
+        "site-commits",
+        "surefire-commits",
+        "surefire-dev",
+        "surefire-users",
+        "users",
+        "wagon-commits",
+        "wagon-dev",
+        "wagon-users"
+    ],
+    "mesatee": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications"
+    ],
+    "mesos": [
+        "builds",
+        "commits",
+        "dev",
+        "issues",
+        "modules",
+        "reviews",
+        "user"
+    ],
+    "metamodel": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "metron": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "milagro": [
+        "commits",
+        "dev",
+        "issues",
+        "release-mgmt",
+        "users"
+    ],
+    "mina": [
+        "commits",
+        "dev",
+        "ftpserver-users",
+        "users"
+    ],
+    "mnemonic": [
+        "commits",
+        "dev"
+    ],
+    "mrql": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "mrunit": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "mxnet": [
+        "commits",
+        "dev",
+        "discuss-archive",
+        "issues",
+        "user"
+    ],
+    "myfaces": [
+        "announce",
+        "commits",
+        "dev",
+        "notifications",
+        "users"
+    ],
+    "mynewt": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "myriad": [
+        "commits",
+        "dev"
+    ],
+    "nemo": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "netbeans": [
+        "announce",
+        "commits",
+        "dev",
+        "netcat",
+        "notifications",
+        "users"
+    ],
+    "nifi": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "nlpcraft": [
+        "commits",
+        "dev"
+    ],
+    "nutch": [
+        "agent",
+        "commits",
+        "dev",
+        "user"
+    ],
+    "nuttx": [
+        "commits",
+        "dev"
+    ],
+    "ode": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "ofbiz": [
+        "commits",
+        "dev",
+        "notifications",
+        "user"
+    ],
+    "olingo": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "oltu": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "omid": [
+        "commits",
+        "dev"
+    ],
+    "onami": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "oodt": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "oozie": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "openaz": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "openjpa": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "openmeetings": [
+        "commits",
+        "dev",
+        "user",
+        "user-espanol",
+        "user-russian"
+    ],
+    "opennlp": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "openoffice": [
+        "announce",
+        "api",
+        "commits",
+        "dev",
+        "dev-de",
+        "doc",
+        "general-es",
+        "general-ja",
+        "geral-ptbr",
+        "issues",
+        "l10n",
+        "marketing",
+        "progetto-it",
+        "qa",
+        "recruitment",
+        "users",
+        "users-de",
+        "users-fr",
+        "utenti-it"
+    ],
+    "openwebbeans": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "openwhisk": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "orc": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "pagespeed": [
+        "commits",
+        "dev"
+    ],
+    "parquet": [
+        "commits",
+        "dev"
+    ],
+    "pdfbox": [
+        "commits",
+        "dev",
+        "users",
+        "commits",
+        "dev"
+    ],
+    "perl": [
+        "advocacy",
+        "announce",
+        "asp",
+        "dev",
+        "docs-cvs",
+        "docs-dev",
+        "embperl",
+        "embperl-cvs",
+        "modperl",
+        "modperl-cvs",
+        "test-commits",
+        "test-dev"
+    ],
+    "petri": [
+        "commits",
+        "discuss"
+    ],
+    "phoenix": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "pig": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "pinot": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "pirk": [
+        "commits",
+        "dev"
+    ],
+    "pivot": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "plc4x": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "poi": [
+        "commits",
+        "dev",
+        "general",
+        "user"
+    ],
+    "polygene": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "ponymail": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "portals": [
+        "bridges-commits",
+        "bridges-dev",
+        "bridges-user",
+        "commits",
+        "general",
+        "jetspeed-dev",
+        "jetspeed-user",
+        "pluto-dev",
+        "pluto-scm",
+        "pluto-user",
+        "portalapps-dev",
+        "portalapps-user",
+        "wsrp4j-dev",
+        "wsrp4j-user"
+    ],
+    "predictionio": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "provisionr": [
+        "commits",
+        "dev"
+    ],
+    "pulsar": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "qpid": [
+        "commits",
+        "dev",
+        "notifications",
+        "proton",
+        "users"
+    ],
+    "quetz": [
+        "mod_python-commits",
+        "mod_python-dev"
+    ],
+    "quickstep": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "ranger": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "ratis": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "rave": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "reef": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "ripple": [
+        "commits",
+        "dev"
+    ],
+    "river": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "rocketmq": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "roller": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "royale": [
+        "commits",
+        "dev",
+        "issues",
+        "royale-builds",
+        "users"
+    ],
+    "rya": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "s2graph": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "samoa": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "samza": [
+        "commits",
+        "dev"
+    ],
+    "santuario": [
+        "commits",
+        "dev",
+        "general"
+    ],
+    "sdap": [
+        "commits",
+        "dev"
+    ],
+    "sedona": [
+        "dev"
+    ],
+    "sentry": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "serf": [
+        "announce",
+        "dev",
+        "notifications"
+    ],
+    "servicecomb": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "servicemix": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "shale": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "user"
+    ],
+    "shardingsphere": [
+        "dev",
+        "notifications"
+    ],
+    "shindig": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "shiro": [
+        "announce",
+        "commits",
+        "dev",
+        "user"
+    ],
+    "singa": [
+        "commits",
+        "dev"
+    ],
+    "sirona": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "sis": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "skywalking": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "slider": [
+        "commits",
+        "dev"
+    ],
+    "sling": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "spamassassin": [
+        "announce",
+        "blogspam",
+        "commits",
+        "dev",
+        "dev-br",
+        "dev-de",
+        "ruleqa",
+        "sysadmins",
+        "users"
+    ],
+    "spark": [
+        "commits",
+        "dev",
+        "issues",
+        "reviews",
+        "user"
+    ],
+    "spot": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "sqoop": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "stanbol": [
+        "commits",
+        "dev"
+    ],
+    "stdcxx": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "steve": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "storm": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "stratos": [
+        "commits",
+        "dev"
+    ],
+    "streampipes": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "streams": [
+        "commits",
+        "dev"
+    ],
+    "struts": [
+        "announcements",
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "submarine": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "subversion": [
+        "announce",
+        "commits",
+        "dev",
+        "issues",
+        "notifications",
+        "users"
+    ],
+    "superset": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "synapse": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "syncope": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "systemds": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "systemml": [
+        "commits",
+        "dev",
+        "issues"
+    ],
+    "tajo": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "tamaya": [
+        "commits",
+        "dev"
+    ],
+    "tapestry": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "taverna": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "tcl": [
+        "commits",
+        "general",
+        "mod_dtcl",
+        "mod_dtcl-cvs",
+        "mod_tcl-dev",
+        "rivet-dev",
+        "rivet-user",
+        "site-cvs",
+        "websh-cvs",
+        "websh-dev",
+        "websh-user"
+    ],
+    "teaclave": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications"
+    ],
+    "tephra": [
+        "commits",
+        "dev"
+    ],
+    "tez": [
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "thrift": [
+        "commits",
+        "dev",
+        "notifications",
+        "user"
+    ],
+    "tika": [
+        "commits",
+        "corpora-dev",
+        "dev",
+        "user"
+    ],
+    "tiles": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "tinkerpop": [
+        "commits",
+        "dev"
+    ],
+    "tomcat": [
+        "announce",
+        "dev",
+        "taglibs-user",
+        "users"
+    ],
+    "tomee": [
+        "commits",
+        "dev",
+        "notifications",
+        "users"
+    ],
+    "toree": [
+        "commits",
+        "dev",
+        "reviews"
+    ],
+    "trafficcontrol": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "trafficserver": [
+        "announce",
+        "commits",
+        "dev",
+        "github",
+        "issues",
+        "users"
+    ],
+    "trafodion": [
+        "codereview",
+        "commits",
+        "dev",
+        "issues",
+        "user"
+    ],
+    "training": [
+        "commits",
+        "dev",
+        "issues",
+        "notifications"
+    ],
+    "tubemq": [
+        "commits",
+        "dev"
+    ],
+    "turbine": [
+        "commits",
+        "dev",
+        "general",
+        "tdk-dev",
+        "user"
+    ],
+    "tuscany": [
+        "commits",
+        "dev",
+        "notification",
+        "user"
+    ],
+    "tuweni": [
+        "commits",
+        "dev",
+        "issues",
+        "users"
+    ],
+    "tvm": [
+        "commits",
+        "dev",
+        "discuss-archive"
+    ],
+    "twill": [
+        "commits",
+        "dev"
+    ],
+    "uima": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "unomi": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "usergrid": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "vcl": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "velocity": [
+        "commits",
+        "dev",
+        "general",
+        "user"
+    ],
+    "vxquery": [
+        "commits",
+        "dev"
+    ],
+    "warble": [
+        "commits",
+        "dev"
+    ],
+    "weex": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "whimsical": [
+        "commits",
+        "dev",
+        "notifications"
+    ],
+    "whirr": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "wicket": [
+        "announce",
+        "commits",
+        "dev",
+        "users"
+    ],
+    "wink": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "wookie": [
+        "commits",
+        "dev",
+        "user"
+    ],
+    "ws": [
+        "addressing-dev",
+        "announce",
+        "axis-cvs",
+        "axis-tck",
+        "commits",
+        "commons-dev",
+        "dev",
+        "ews-dev",
+        "fx-dev",
+        "fx-user",
+        "jaxme-dev",
+        "kandula-dev",
+        "mirae-dev",
+        "mirae-user",
+        "muse-commits",
+        "muse-dev",
+        "muse-user",
+        "pubscribe-commits",
+        "pubscribe-dev",
+        "pubscribe-user",
+        "rampart-c-dev",
+        "rampart-dev",
+        "sandesha-dev",
+        "savan-dev",
+        "scout-dev",
+        "soap-dev",
+        "soap-user",
+        "tsik-dev",
+        "users",
+        "woden-dev",
+        "wsif-dev",
+        "wsif-user",
+        "wsrf-commits",
+        "wsrf-dev",
+        "wsrf-user",
+        "wss4j-dev",
+        "xmlrpc-auto",
+        "xmlrpc-dev"
+    ],
+    "xalan": [
+        "c-users",
+        "commits",
+        "dev",
+        "j-users"
+    ],
+    "xerces": [
+        "c-dev",
+        "c-users",
+        "commits",
+        "general",
+        "j-dev",
+        "j-users",
+        "p-dev",
+        "xml-commons-dev"
+    ],
+    "xml": [
+        "announcements",
+        "axkit-dev",
+        "axkit-users",
+        "bugs",
+        "commons-cvs",
+        "contrib-cvs",
+        "crimson-cvs",
+        "general",
+        "general-cvs",
+        "juice-dev",
+        "juice-svn",
+        "rpc-dev",
+        "rpc-user",
+        "security-users",
+        "soap-dev",
+        "soap-user",
+        "xang-cvs",
+        "xang-dev",
+        "xindice-dev",
+        "xindice-users",
+        "xmlbeans-cvs",
+        "xmlbeans-dev",
+        "xmlbeans-user",
+        "xsp-dev"
+    ],
+    "xmlbeans": [
+        "commits",
+        "cxx-dev",
+        "dev",
+        "user"
+    ],
+    "xmlgraphics": [
+        "batik-commits",
+        "batik-dev",
+        "batik-users",
+        "commits",
+        "fop-commits",
+        "fop-dev",
+        "fop-users",
+        "general"
+    ],
+    "yetus": [
+        "commits",
+        "dev",
+        "gitbox",
+        "notifications"
+    ],
+    "yunikorn": [
+        "dev",
+        "issues",
+        "reviews"
+    ],
+    "zeppelin": [
+        "commits",
+        "dev",
+        "users"
+    ],
+    "zipkin": [
+        "commits",
+        "dev",
+        "users"
+    ]
+}
