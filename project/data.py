@@ -4,6 +4,7 @@ from project.xml_handler import MailListXMLHandler
 from xml import sax
 import json
 from datetime import datetime
+from multiprocessing import Pool
 
 
 class Project:
@@ -34,12 +35,13 @@ class Project:
         return row
 
     def getMonthData(self, month):
-        page = "0"
+        page = "6"
         original_id = ""
         mails = []
         counter = 1
         while True:
             archive_url = self.base_url + month + ".mbox/ajax/thread?" + page
+            print(archive_url)
             archive_xml = request.urlopen(archive_url).read().decode("utf-8")
             handler = MailListXMLHandler()
             sax.parseString(archive_xml, handler)
@@ -47,7 +49,7 @@ class Project:
             for msg in messages:
                 if int(msg['depth']) == 0:
                     original_id = msg['id']
-                if msg['linked'] == "1":  # only store data with link
+                if msg['linked'] == "1" and len(msg['id']) > 0:  # only store data with link
                     mail = self.getMailData(month, msg['id'], original_id, msg['depth'])
                     mails.append(mail)
                     print(counter, page)
@@ -55,15 +57,55 @@ class Project:
             index = handler.index
             if int(index['page']) + 1 == int(index['pages']):
                 break
-            page = index['page']
+            page = str(int(index['page']) + 1)
+        return mails
+
+    def getPageData(self, month, page):
+        archive_url = self.base_url + month + ".mbox/ajax/thread?" + str(page)
+        archive_xml = request.urlopen(archive_url).read().decode("utf-8")
+        handler = MailListXMLHandler()
+        sax.parseString(archive_xml, handler)
+        messages = handler.messages
+        pageMails = []
+        original_id = ""
+        for msg in messages:
+            if int(msg['depth']) == 0:
+                original_id = msg['id']
+            if msg['linked'] == "1" and len(msg['id']) > 0:  # only store data with link
+                try:
+                    mail = self.getMailData(month, msg['id'], original_id, msg['depth'])
+                    pageMails.append(mail)
+                except UnicodeDecodeError:
+                    pass
+        return pageMails
+
+    def getMonthDataMultiProcess(self, month):
+        # get total page nums
+        url0 = self.base_url + month + ".mbox/ajax/thread?0"
+        xml0 = request.urlopen(url0).read().decode("utf-8")
+        handler = MailListXMLHandler()
+        sax.parseString(xml0, handler)
+        index = handler.index
+        pages = int(index['pages'])
+
+        ans = []
+        p = Pool(processes=8)
+        for i in range(pages):
+            ret = p.apply_async(self.getPageData, args=(month, i))
+            ans.append(ret)
+        p.close()
+        p.join()
+
+        mails = []
+        for a in ans:
+            mails.append(a.get())
         return mails
 
 
 if __name__ == '__main__':
     pro = Project('flink', 'user-zh')
-    # todo: multi process / thread
     start = datetime.now()
-    res = pro.getMonthData('202007')
+    res = pro.getMonthDataMultiProcess('202007')
     end = datetime.now()
     print((end-start).seconds)
     with open("202007.json", "w") as f:
