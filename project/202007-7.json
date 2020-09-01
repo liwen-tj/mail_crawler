@@ -1,0 +1,352 @@
+[
+    {
+        "id": "<tencent_891ECF555F964A76453D0D8AC3DEFD2A2605@qq.com>",
+        "from": "&quot;小学生&quot; &lt;201782...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 02:56:52 GMT",
+        "subject": "flink消费kafka提交偏移量",
+        "content": "各位大佬，我自己使用flink1.11时，消费kafka数据源时候，使用group offset，在外部的kafka&#010;tool发现offset没有及时提交，请问下这个在flink中怎么保证呢",
+        "depth": "0",
+        "reply": "<tencent_891ECF555F964A76453D0D8AC3DEFD2A2605@qq.com>"
+    },
+    {
+        "id": "<000001d6663b$09b356a0$1d1a03e0$@163.com>",
+        "from": "&quot;venn&quot; &lt;wxchunj...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 06:31:19 GMT",
+        "subject": "RE: flink消费kafka提交偏移量",
+        "content": "可以参考下这个：&#013;&#010;https://ci.apache.org/projects/flink/flink-docs-release-1.11/dev/connectors/&#013;&#010;kafka.html#kafka-consumers-offset-committing-behaviour-configuration&#013;&#010;&#013;&#010;-----Original Message-----&#013;&#010;From: user-zh-return-6007-wxchunjhyy=163.com@flink.apache.org&#013;&#010;&lt;user-zh-return-6007-wxchunjhyy=163.com@flink.apache.org&gt; On Behalf Of 小学&#013;&#010;生&#013;&#010;Sent: 2020年7月30日 10:57&#013;&#010;To: user-zh &lt;user-zh@flink.apache.org&gt;&#013;&#010;Subject: flink消费kafka提交偏移量&#013;&#010;&#013;&#010;各位大佬，我自己使用flink1.11时，消费kafka数据源时候，使用group offset，在外&#013;&#010;部的kafka tool发现offset没有及时提交，请问下这个在flink中怎么保证呢&#013;&#010;",
+        "depth": "1",
+        "reply": "<tencent_891ECF555F964A76453D0D8AC3DEFD2A2605@qq.com>"
+    },
+    {
+        "id": "<16912b14.5d96.1739f00191b.Coremail.greemqqran@163.com>",
+        "from": "&quot;Michael Ran&quot; &lt;greemqq...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 09:14:10 GMT",
+        "subject": "Re:flink消费kafka提交偏移量",
+        "content": "checikpoint 会保存到state 里面。有种模式在complate 后还会提交&#010;在 2020-07-30 10:56:52，\"小学生\" &lt;201782053@qq.com&gt; 写道：&#010;&gt;各位大佬，我自己使用flink1.11时，消费kafka数据源时候，使用group&#010;offset，在外部的kafka tool发现offset没有及时提交，请问下这个在flink中怎么保证呢&#013;&#010;",
+        "depth": "1",
+        "reply": "<tencent_891ECF555F964A76453D0D8AC3DEFD2A2605@qq.com>"
+    },
+    {
+        "id": "<tencent_55E8AA329EC715471645B65C5D0EEADDDE05@qq.com>",
+        "from": "&quot;小学生&quot; &lt;201782...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 09:21:05 GMT",
+        "subject": "Re:flink消费kafka提交偏移量",
+        "content": "您好，有具体相关complate&amp;nbsp;的相关介绍吗",
+        "depth": "2",
+        "reply": "<tencent_891ECF555F964A76453D0D8AC3DEFD2A2605@qq.com>"
+    },
+    {
+        "id": "<475e12c9.380f.1739e15343c.Coremail.kandy1203@163.com>",
+        "from": "&quot;kandy.wang&quot; &lt;kandy1...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 04:57:36 GMT",
+        "subject": "flink 1.11 streaming 写入hive 5min表相关问题",
+        "content": "现象：&#010;CREATE TABLE test.xxx_5min (&#010;&#010;......&#010;&#010;) PARTITIONED BY (dt string , hm string) stored as orc  TBLPROPERTIES(&#010;&#010;  'sink.partition-commit.trigger'='process-time',&#010;&#010;  'sink.partition-commit.delay'='5 min',&#010;&#010;  'sink.partition-commit.policy.kind'='metastore,success-file',&#010;&#010;  'sink.rolling-policy.file-size'='128MB',&#010;&#010;  'sink.rolling-policy.check-interval' ='30s',&#010;&#010;  'sink.rolling-policy.rollover-interval'='5min'&#010;&#010;); &#010;dt = FROM_UNIXTIME((UNIX_TIMESTAMP()/300 * 300) ,'yyyyMMdd')&#010;hm = FROM_UNIXTIME((UNIX_TIMESTAMP()/300 * 300) ,'HHmm')&#010;5min产生一个分区， ，checkpoint频率：30s&#010;问题：&#010;1.flink 1.11 steaming写入为什么是1min产生一个文件，而且文件大小没有到128M，如果参数sink.rolling-policy.rollover-interval'='5min&#010;文件滚动时间 5min 滚动大小128M生效的话，就不应该产生这么小的问题，文件大小没有按照预期控制，为啥？&#010;     2.小文件问题该如何解决？有什么好的思路&#010;    3. 标记文件_Success文件为啥上报延迟？ 如果是 12：30的分区，5min的分区，理论上应该12：35左右的时候就应该提交partition?",
+        "depth": "0",
+        "reply": "<475e12c9.380f.1739e15343c.Coremail.kandy1203@163.com>"
+    },
+    {
+        "id": "<CABi+2jTN31P=EuzBfuovpVF2oSQvOjgrrtG+7cQ2ZRg3ocLz-g@mail.gmail.com>",
+        "from": "Jingsong Li &lt;jingsongl...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 05:49:25 GMT",
+        "subject": "Re: flink 1.11 streaming 写入hive 5min表相关问题",
+        "content": "Hi,&#013;&#010;&#013;&#010;1.checkpoint会强制滚动&#013;&#010;2.目前最简单的思路是加大checkpoint interval，另一个思路是在partition commit时触发hive去compaction。&#013;&#010;3.success文件的生成依赖checkpoint interval，所以会有一定延迟。&#013;&#010;&#013;&#010;Best,&#013;&#010;Jingsong&#013;&#010;&#013;&#010;On Thu, Jul 30, 2020 at 1:14 PM kandy.wang &lt;kandy1203@163.com&gt; wrote:&#013;&#010;&#013;&#010;&gt; 现象：&#013;&#010;&gt; CREATE TABLE test.xxx_5min (&#013;&#010;&gt;&#013;&#010;&gt; ......&#013;&#010;&gt;&#013;&#010;&gt; ) PARTITIONED BY (dt string , hm string) stored as orc  TBLPROPERTIES(&#013;&#010;&gt;&#013;&#010;&gt;   'sink.partition-commit.trigger'='process-time',&#013;&#010;&gt;&#013;&#010;&gt;   'sink.partition-commit.delay'='5 min',&#013;&#010;&gt;&#013;&#010;&gt;   'sink.partition-commit.policy.kind'='metastore,success-file',&#013;&#010;&gt;&#013;&#010;&gt;   'sink.rolling-policy.file-size'='128MB',&#013;&#010;&gt;&#013;&#010;&gt;   'sink.rolling-policy.check-interval' ='30s',&#013;&#010;&gt;&#013;&#010;&gt;   'sink.rolling-policy.rollover-interval'='5min'&#013;&#010;&gt; );&#013;&#010;&gt; dt = FROM_UNIXTIME((UNIX_TIMESTAMP()/300 * 300) ,'yyyyMMdd')&#013;&#010;&gt; hm = FROM_UNIXTIME((UNIX_TIMESTAMP()/300 * 300) ,'HHmm')&#013;&#010;&gt; 5min产生一个分区， ，checkpoint频率：30s&#013;&#010;&gt; 问题：&#013;&#010;&gt; 1.flink 1.11 steaming写入为什么是1min产生一个文件，而且文件大小没有到128M，如果参数sink.rolling-policy.rollover-interval'='5min&#013;&#010;&gt; 文件滚动时间 5min 滚动大小128M生效的话，就不应该产生这么小的问题，文件大小没有按照预期控制，为啥？&#013;&#010;&gt;      2.小文件问题该如何解决？有什么好的思路&#013;&#010;&gt;     3. 标记文件_Success文件为啥上报延迟？ 如果是&#013;&#010;&gt; 12：30的分区，5min的分区，理论上应该12：35左右的时候就应该提交partition?&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&#013;&#010;&#013;&#010;-- &#013;&#010;Best, Jingsong Lee&#013;&#010;",
+        "depth": "1",
+        "reply": "<475e12c9.380f.1739e15343c.Coremail.kandy1203@163.com>"
+    },
+    {
+        "id": "<tencent_170E5A21E5B7897A3013124A5921C44E8308@qq.com>",
+        "from": "&quot;op&quot; &lt;520075...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 07:57:22 GMT",
+        "subject": "StatementSet 里添加多个insertsql执行",
+        "content": "大家好，我发现StatementSet 里添加2个insertsql执行的时候会启动两个application，&#013;&#010;这两个任务除了sink都是一样的吗？这样是不是会重复计算和浪费资源，而且两边的数据可能不同步，&#013;&#010;有什么办法能解决？&#013;&#010;谢谢",
+        "depth": "0",
+        "reply": "<tencent_170E5A21E5B7897A3013124A5921C44E8308@qq.com>"
+    },
+    {
+        "id": "<CADQYLGtu2+42uTnrV-bcAAC-amkq8p8mXZj=iaVgv7nq98zVSQ@mail.gmail.com>",
+        "from": "godfrey he &lt;godfre...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 08:01:46 GMT",
+        "subject": "Re: StatementSet 里添加多个insertsql执行",
+        "content": "StatementSet 中的多个insert会被编译成一个job提交。&#013;&#010;你能提供一下对应的代码样例吗？&#013;&#010;&#013;&#010;op &lt;520075694@qq.com&gt; 于2020年7月30日周四 下午3:57写道：&#013;&#010;&#013;&#010;&gt; 大家好，我发现StatementSet 里添加2个insertsql执行的时候会启动两个application，&#013;&#010;&gt; 这两个任务除了sink都是一样的吗？这样是不是会重复计算和浪费资源，而且两边的数据可能不同步，&#013;&#010;&gt; 有什么办法能解决？&#013;&#010;&gt; 谢谢&#013;&#010;",
+        "depth": "1",
+        "reply": "<tencent_170E5A21E5B7897A3013124A5921C44E8308@qq.com>"
+    },
+    {
+        "id": "<tencent_8FC64FE2214B811870B0490BAD7C32F11605@qq.com>",
+        "from": "&quot;op&quot; &lt;520075...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 08:04:53 GMT",
+        "subject": "回复： StatementSet 里添加多个insertsql执行",
+        "content": "不好意思，我找到问题了，因为我再程序里面除了调用statement.execute外还调用了streamEnv.execute&#013;&#010;所以起了两个app，&#013;&#010;谢谢&#013;&#010;&#013;&#010;&#013;&#010;------------------&amp;nbsp;原始邮件&amp;nbsp;------------------&#013;&#010;发件人:                                                                               &#010;                                        \"user-zh\"                                        &#010;                                           &lt;godfreyhe@gmail.com&amp;gt;;&#013;&#010;发送时间:&amp;nbsp;2020年7月30日(星期四) 下午4:01&#013;&#010;收件人:&amp;nbsp;\"user-zh\"&lt;user-zh@flink.apache.org&amp;gt;;&#013;&#010;&#013;&#010;主题:&amp;nbsp;Re: StatementSet 里添加多个insertsql执行&#013;&#010;&#013;&#010;&#013;&#010;&#013;&#010;StatementSet 中的多个insert会被编译成一个job提交。&#013;&#010;你能提供一下对应的代码样例吗？&#013;&#010;&#013;&#010;op &lt;520075694@qq.com&amp;gt; 于2020年7月30日周四 下午3:57写道：&#013;&#010;&#013;&#010;&amp;gt; 大家好，我发现StatementSet 里添加2个insertsql执行的时候会启动两个application，&#013;&#010;&amp;gt; 这两个任务除了sink都是一样的吗？这样是不是会重复计算和浪费资源，而且两边的数据可能不同步，&#013;&#010;&amp;gt; 有什么办法能解决？&#013;&#010;&amp;gt; 谢谢",
+        "depth": "2",
+        "reply": "<tencent_170E5A21E5B7897A3013124A5921C44E8308@qq.com>"
+    },
+    {
+        "id": "<6975ea42.4d66.1739edf276e.Coremail.lydata_jia@163.com>",
+        "from": "lydata &lt;lydata_...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 08:38:11 GMT",
+        "subject": "flink  kafka  SQL Connectors  传递kerberos 参数",
+        "content": " flink v1.11.1  kafka使用了kerberos &#010;下面DDL 是支持 kerberos 参数&#010;&#010;&#010;CREATETABLEkafkaTable(&#010;...&#010;)WITH('connector'='kafka',&#010;'topic'='user_behavior',&#010;'properties.bootstrap.servers'='localhost:9092',&#010;'properties.group.id'='testGroup', 'security.protocol'='SASL_PLAINTEXT',&#010;'sasl.mechanism'='GSSAPI',&#010;'sasl.kerberos.service.name'='kafka',&#010;'format'='csv',&#010;'scan.startup.mode'='earliest-offset'&#010;)&#010;&#010;&#010;是否支持上面的参数？",
+        "depth": "0",
+        "reply": "<6975ea42.4d66.1739edf276e.Coremail.lydata_jia@163.com>"
+    },
+    {
+        "id": "<7acfc812.5208.1739ef3393e.Coremail.lydata_jia@163.com>",
+        "from": "lydata  &lt;lydata_...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 09:00:06 GMT",
+        "subject": "Re:flink  kafka  SQL Connectors  传递kerberos 参数",
+        "content": "&#010;&#010;是否需要这3个参数，或者下面参数是否支持？&#010;&#010;&#010;&#010;&#010;'security.protocol'='SASL_PLAINTEXT',&#010;'sasl.mechanism'='GSSAPI',&#010;'sasl.kerberos.service.name'='kafka',&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;在 2020-07-30 16:38:11，\"lydata\" &lt;lydata_jia@163.com&gt; 写道：&#010;&gt; flink v1.11.1  kafka使用了kerberos &#010;&gt;下面DDL 是支持 kerberos 参数&#010;&gt;&#010;&gt;&#010;&gt;CREATETABLEkafkaTable(&#010;&gt;...&#010;&gt;)WITH('connector'='kafka',&#010;&gt;'topic'='user_behavior',&#010;&gt;'properties.bootstrap.servers'='localhost:9092',&#010;&gt;'properties.group.id'='testGroup', 'security.protocol'='SASL_PLAINTEXT',&#010;&gt;'sasl.mechanism'='GSSAPI',&#010;&gt;'sasl.kerberos.service.name'='kafka',&#010;&gt;'format'='csv',&#010;&gt;'scan.startup.mode'='earliest-offset'&#010;&gt;)&#010;&gt;&#010;&gt;&#010;&gt;是否支持上面的参数？&#010;",
+        "depth": "1",
+        "reply": "<6975ea42.4d66.1739edf276e.Coremail.lydata_jia@163.com>"
+    },
+    {
+        "id": "<88272C84-E420-4822-906F-E4A9D5F8B57B@gmail.com>",
+        "from": "Leonard Xu &lt;xbjt...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 09:34:41 GMT",
+        "subject": "Re: flink  kafka  SQL Connectors  传递kerberos 参数",
+        "content": "Hi, &#010;kafka properties 的参数是可以透传的，你试试下面：&#010;&#010;‘properties.security.protocol'='SASL_PLAINTEXT',&#010;‘properties.sasl.mechanism'='GSSAPI’,&#010;‘properties.sasl.kerberos.service.name'='kafka',&#010;&#010;祝好&#010;Leonard&#010;&#010;&#010;&gt; 在 2020年7月30日，17:00，lydata &lt;lydata_jia@163.com&gt; 写道：&#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; 是否需要这3个参数，或者下面参数是否支持？&#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; 'security.protocol'='SASL_PLAINTEXT',&#010;&gt; 'sasl.mechanism'='GSSAPI',&#010;&gt; 'sasl.kerberos.service.name'='kafka',&#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; 在 2020-07-30 16:38:11，\"lydata\" &lt;lydata_jia@163.com&gt; 写道：&#010;&gt;&gt; flink v1.11.1  kafka使用了kerberos &#010;&gt;&gt; 下面DDL 是支持 kerberos 参数&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; CREATETABLEkafkaTable(&#010;&gt;&gt; ...&#010;&gt;&gt; )WITH('connector'='kafka',&#010;&gt;&gt; 'topic'='user_behavior',&#010;&gt;&gt; 'properties.bootstrap.servers'='localhost:9092',&#010;&gt;&gt; 'properties.group.id'='testGroup', 'security.protocol'='SASL_PLAINTEXT',&#010;&gt;&gt; 'sasl.mechanism'='GSSAPI',&#010;&gt;&gt; 'sasl.kerberos.service.name'='kafka',&#010;&gt;&gt; 'format'='csv',&#010;&gt;&gt; 'scan.startup.mode'='earliest-offset'&#010;&gt;&gt; )&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; 是否支持上面的参数？&#010;&#010;&#010;",
+        "depth": "2",
+        "reply": "<6975ea42.4d66.1739edf276e.Coremail.lydata_jia@163.com>"
+    },
+    {
+        "id": "<64f5e452.5be9.1739f22fa58.Coremail.lydata_jia@163.com>",
+        "from": "lydata  &lt;lydata_...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 09:52:16 GMT",
+        "subject": "Re:Re: flink  kafka  SQL Connectors  传递kerberos 参数",
+        "content": "&#010;&#010;&#010;&#010;&#010;&#010;谢谢 ，我试试&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;在 2020-07-30 17:34:41，\"Leonard Xu\" &lt;xbjtdcq@gmail.com&gt; 写道：&#010;&gt;Hi, &#010;&gt;kafka properties 的参数是可以透传的，你试试下面：&#010;&gt;&#010;&gt;‘properties.security.protocol'='SASL_PLAINTEXT',&#010;&gt;‘properties.sasl.mechanism'='GSSAPI’,&#010;&gt;‘properties.sasl.kerberos.service.name'='kafka',&#010;&gt;&#010;&gt;祝好&#010;&gt;Leonard&#010;&gt;&#010;&gt;&#010;&gt;&gt; 在 2020年7月30日，17:00，lydata &lt;lydata_jia@163.com&gt; 写道：&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; 是否需要这3个参数，或者下面参数是否支持？&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; 'security.protocol'='SASL_PLAINTEXT',&#010;&gt;&gt; 'sasl.mechanism'='GSSAPI',&#010;&gt;&gt; 'sasl.kerberos.service.name'='kafka',&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; 在 2020-07-30 16:38:11，\"lydata\" &lt;lydata_jia@163.com&gt; 写道：&#010;&gt;&gt;&gt; flink v1.11.1  kafka使用了kerberos &#010;&gt;&gt;&gt; 下面DDL 是支持 kerberos 参数&#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; CREATETABLEkafkaTable(&#010;&gt;&gt;&gt; ...&#010;&gt;&gt;&gt; )WITH('connector'='kafka',&#010;&gt;&gt;&gt; 'topic'='user_behavior',&#010;&gt;&gt;&gt; 'properties.bootstrap.servers'='localhost:9092',&#010;&gt;&gt;&gt; 'properties.group.id'='testGroup', 'security.protocol'='SASL_PLAINTEXT',&#010;&gt;&gt;&gt; 'sasl.mechanism'='GSSAPI',&#010;&gt;&gt;&gt; 'sasl.kerberos.service.name'='kafka',&#010;&gt;&gt;&gt; 'format'='csv',&#010;&gt;&gt;&gt; 'scan.startup.mode'='earliest-offset'&#010;&gt;&gt;&gt; )&#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; 是否支持上面的参数？&#010;",
+        "depth": "3",
+        "reply": "<6975ea42.4d66.1739edf276e.Coremail.lydata_jia@163.com>"
+    },
+    {
+        "id": "<DA3DEAD7-A463-47E2-9707-777EEBF607D3@gmail.com>",
+        "from": "Leonard Xu &lt;xbjt...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 10:08:40 GMT",
+        "subject": "Re: flink  kafka  SQL Connectors  传递kerberos 参数",
+        "content": "不知道你的问题是能否通过这个解决&#010;&#010;我看了下目前文档里缺少了传递kafka properties 的部分，我建了个issue[1]把文档补齐&#010;&#010;Best&#010;Leonard&#010;[1] https://issues.apache.org/jira/browse/FLINK-18768 &lt;https://issues.apache.org/jira/browse/FLINK-18768&gt;&#010;&#010;&#010;&gt; 在 2020年7月30日，17:52，lydata &lt;lydata_jia@163.com&gt; 写道：&#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; 谢谢 ，我试试&#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; &#010;&gt; 在 2020-07-30 17:34:41，\"Leonard Xu\" &lt;xbjtdcq@gmail.com&gt; 写道：&#010;&gt;&gt; Hi, &#010;&gt;&gt; kafka properties 的参数是可以透传的，你试试下面：&#010;&gt;&gt; &#010;&gt;&gt; ‘properties.security.protocol'='SASL_PLAINTEXT',&#010;&gt;&gt; ‘properties.sasl.mechanism'='GSSAPI’,&#010;&gt;&gt; ‘properties.sasl.kerberos.service.name'='kafka',&#010;&gt;&gt; &#010;&gt;&gt; 祝好&#010;&gt;&gt; Leonard&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt;&gt; 在 2020年7月30日，17:00，lydata &lt;lydata_jia@163.com&gt; 写道：&#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; 是否需要这3个参数，或者下面参数是否支持？&#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; 'security.protocol'='SASL_PLAINTEXT',&#010;&gt;&gt;&gt; 'sasl.mechanism'='GSSAPI',&#010;&gt;&gt;&gt; 'sasl.kerberos.service.name'='kafka',&#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; &#010;&gt;&gt;&gt; 在 2020-07-30 16:38:11，\"lydata\" &lt;lydata_jia@163.com&gt; 写道：&#010;&gt;&gt;&gt;&gt; flink v1.11.1  kafka使用了kerberos &#010;&gt;&gt;&gt;&gt; 下面DDL 是支持 kerberos 参数&#010;&gt;&gt;&gt;&gt; &#010;&gt;&gt;&gt;&gt; &#010;&gt;&gt;&gt;&gt; CREATETABLEkafkaTable(&#010;&gt;&gt;&gt;&gt; ...&#010;&gt;&gt;&gt;&gt; )WITH('connector'='kafka',&#010;&gt;&gt;&gt;&gt; 'topic'='user_behavior',&#010;&gt;&gt;&gt;&gt; 'properties.bootstrap.servers'='localhost:9092',&#010;&gt;&gt;&gt;&gt; 'properties.group.id'='testGroup', 'security.protocol'='SASL_PLAINTEXT',&#010;&gt;&gt;&gt;&gt; 'sasl.mechanism'='GSSAPI',&#010;&gt;&gt;&gt;&gt; 'sasl.kerberos.service.name'='kafka',&#010;&gt;&gt;&gt;&gt; 'format'='csv',&#010;&gt;&gt;&gt;&gt; 'scan.startup.mode'='earliest-offset'&#010;&gt;&gt;&gt;&gt; )&#010;&gt;&gt;&gt;&gt; &#010;&gt;&gt;&gt;&gt; &#010;&gt;&gt;&gt;&gt; 是否支持上面的参数？&#010;&#010;&#010;",
+        "depth": "4",
+        "reply": "<6975ea42.4d66.1739edf276e.Coremail.lydata_jia@163.com>"
+    },
+    {
+        "id": "<tencent_BDA201F7023CEED2492F3E3CCFD18CC9CC06@qq.com>",
+        "from": "&quot;胡松&quot; &lt;hs...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Thu, 30 Jul 2020 08:52:24 GMT",
+        "subject": "[flink批处理DataSet 写orc文件咨询",
+        "content": "hi all&#013;&#010;&amp;nbsp; &amp;nbsp; 请问各位大佬有实现flink批处理DataSet 写orc文件么&#013;&#010;&#013;&#010;&#013;&#010;多谢",
+        "depth": "0",
+        "reply": "<tencent_BDA201F7023CEED2492F3E3CCFD18CC9CC06@qq.com>"
+    },
+    {
+        "id": "<202007310921023165910@163.com>",
+        "from": "&quot;hdxg1101300123@163.com&quot; &lt;hdxg1101300...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 01:21:03 GMT",
+        "subject": "回复: Re: Flink实现Kafka到Mysql的 End-To-End Exactly-Once中遇到的问题",
+        "content": "我参考你的代码，也遇到了同样的问题，有什么好的方法吗？&#013;&#010;&#013;&#010;&#013;&#010;&#013;&#010;hdxg1101300123@163.com&#013;&#010; &#013;&#010;发件人： 卢伟楠&#013;&#010;发送时间： 2020-01-03 15:18&#013;&#010;收件人： user-zh&#013;&#010;主题： Re: Flink实现Kafka到Mysql的 End-To-End Exactly-Once中遇到的问题&#013;&#010;我发这个用于测试的代码，里面的mysql-connector-java已经是最新的了，由于使用mysql-connector-java老版本趟过的坑已经处理过一遍了&#013;&#010; &#013;&#010;&gt; 在 2020年1月3日，下午3:13，残翅2008 &lt;770968154@qq.com&gt; 写道：&#013;&#010;&gt; &#013;&#010;&gt; 对于第1个问题尝试使用mysql-connector-java的latest版本&#013;&#010;&gt; 我之前使用5.1.6版本遇到同样的问题&#013;&#010;&gt; 改为5.1.48比较稳定&#013;&#010;&gt; &lt;dependency&amp;gt;&#013;&#010;&gt; &amp;nbsp; &amp;nbsp; &lt;groupId&amp;gt;mysql&lt;/groupId&amp;gt;&#013;&#010;&gt; &amp;nbsp; &amp;nbsp; &lt;artifactId&amp;gt;mysql-connector-java&lt;/artifactId&amp;gt;&#013;&#010;&gt; &amp;nbsp; &amp;nbsp; &lt;version&amp;gt;5.1.48&lt;/version&amp;gt;&#013;&#010;&gt; &lt;/dependency&amp;gt;&#013;&#010;&gt; &#013;&#010;&gt; &#013;&#010;&gt; &#013;&#010;&gt; &#013;&#010;&gt; &#013;&#010;&gt; ------------------&amp;nbsp;原始邮件&amp;nbsp;------------------&#013;&#010;&gt; 发件人:&amp;nbsp;\"LakeShen\"&lt;shenleifighting@gmail.com&amp;gt;;&#013;&#010;&gt; 发送时间:&amp;nbsp;2019年12月26日(星期四) 中午11:35&#013;&#010;&gt; 收件人:&amp;nbsp;\"user-zh\"&lt;user-zh@flink.apache.org&amp;gt;;&#013;&#010;&gt; &#013;&#010;&gt; 主题:&amp;nbsp;Re: Flink实现Kafka到Mysql的 End-To-End Exactly-Once中遇到的问题&#013;&#010;&gt; &#013;&#010;&gt; &#013;&#010;&gt; &#013;&#010;&gt; 是否可以尝试使用幂等来解决 端到端的一致性&#013;&#010;&gt; &#013;&#010;&gt; Best wishes，&#013;&#010;&gt; 沈磊&#013;&#010;&gt; &#013;&#010;&gt; 卢伟楠 &lt;glusecond@gmail.com&amp;gt; 于2019年12月25日周三 下午4:09写道：&#013;&#010;&gt; &#013;&#010;&gt; &amp;gt; 各位大佬好：&#013;&#010;&gt; &amp;gt;&#013;&#010;&gt; &amp;gt; 最近是实现Kafka到Mysql的 End-To-End Exactly-Once中遇到以下2个问题：&#013;&#010;&gt; &amp;gt; 1：com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:&#013;&#010;&gt; &amp;gt; Communications link failure during commit(). Transaction resolution unknown.&#013;&#010;&gt; &amp;gt; 2：org.apache.flink.streaming.runtime.tasks.TimerException:&#013;&#010;&gt; &amp;gt; org.apache.flink.streaming.runtime.tasks.ExceptionInChainedOperatorException:&#013;&#010;&gt; &amp;gt; Could not forward element to next operator&#013;&#010;&gt; &amp;gt;&#013;&#010;&gt; &amp;gt; 已经做了一个最简单的复现问题的demo，求指教&#013;&#010;&gt; &amp;gt; git clone https://github.com/lusecond/flink_help --depth=1&#013;&#010;&gt; &amp;gt;&#013;&#010;&gt; &amp;gt;&#013;&#010;&gt; &amp;gt; 测试过程中，发现继承TwoPhaseCommitSinkFunction类的4个重写方法beginTransaction、preCommit、commit、abort&#013;&#010;&gt; &amp;gt; 分别在不同的线程工作，怀疑过因为线程切换导致jdbc的事务提交出问题，已经做过相关测试排除不是由此引起的问题&#013;&#010;",
+        "depth": "1",
+        "reply": "<202007310921023165910@163.com>"
+    },
+    {
+        "id": "<CAJSjTKxeUdCWkP88sPR2GZ1y8=BaO+Y8eSR7wBQehtnRycaOFg@mail.gmail.com>",
+        "from": "jincheng sun &lt;sunjincheng...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 02:14:58 GMT",
+        "subject": "[DISCUSS] FLIP-133: Rework PyFlink Documentation",
+        "content": "Hi folks,&#010;&#010;Since the release of Flink 1.11, users of PyFlink have continued to grow.&#010;As far as I know there are many companies have used PyFlink for data&#010;analysis, operation and maintenance monitoring business has been put into&#010;production(Such as 聚美优品[1](Jumei),  浙江墨芷[2] (Mozhi) etc.).  According to&#010;the feedback we received, current documentation is not very friendly to&#010;PyFlink users. There are two shortcomings:&#010;&#010;- Python related content is mixed in the Java/Scala documentation, which&#010;makes it difficult for users who only focus on PyFlink to read.&#010;- There is already a \"Python Table API\" section in the Table API document&#010;to store PyFlink documents, but the number of articles is small and the&#010;content is fragmented. It is difficult for beginners to learn from it.&#010;&#010;In addition, FLIP-130 introduced the Python DataStream API. Many documents&#010;will be added for those new APIs. In order to increase the readability and&#010;maintainability of the PyFlink document, Wei Zhong and me have discussed&#010;offline and would like to rework it via this FLIP.&#010;&#010;We will rework the document around the following three objectives:&#010;&#010;- Add a separate section for Python API under the \"Application Development\"&#010;section.&#010;- Restructure current Python documentation to a brand new structure to&#010;ensure complete content and friendly to beginners.&#010;- Improve the documents shared by Python/Java/Scala to make it more&#010;friendly to Python users and without affecting Java/Scala users.&#010;&#010;More detail can be found in the FLIP-133:&#010;https://cwiki.apache.org/confluence/display/FLINK/FLIP-133%3A+Rework+PyFlink+Documentation&#010;&#010;Best,&#010;Jincheng&#010;&#010;[1] https://mp.weixin.qq.com/s/zVsBIs1ZEFe4atYUYtZpRg&#010;[2] https://mp.weixin.qq.com/s/R4p_a2TWGpESBWr3pLtM2g&#010;&#010;",
+        "depth": "0",
+        "reply": "<CAJSjTKxeUdCWkP88sPR2GZ1y8=BaO+Y8eSR7wBQehtnRycaOFg@mail.gmail.com>"
+    },
+    {
+        "id": "<1187E73A-8D29-4E1C-97E1-92B734DE3241@gmail.com>",
+        "from": "Dian Fu &lt;dian0511...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 02:58:39 GMT",
+        "subject": "Re: [DISCUSS] FLIP-133: Rework PyFlink Documentation",
+        "content": "Hi Jincheng,&#010;&#010;Thanks a lot for bringing up this discussion and the proposal. +1 to improve the Python API&#010;doc.&#010;&#010;I have received many feedbacks from PyFlink beginners about the PyFlink doc, e.g. the materials&#010;are too few, the Python doc is mixed with the Java doc and it's not easy to find the docs&#010;he wants to know.&#010;&#010;I think it would greatly improve the user experience if we can have one place which includes&#010;most knowledges PyFlink users should know.&#010;&#010;Regards,&#010;Dian&#010;&#010;&gt; 在 2020年7月31日，上午10:14，jincheng sun &lt;sunjincheng121@gmail.com&gt; 写道：&#010;&gt; &#010;&gt; Hi folks,&#010;&gt; &#010;&gt; Since the release of Flink 1.11, users of PyFlink have continued to grow. As far as I&#010;know there are many companies have used PyFlink for data analysis, operation and maintenance&#010;monitoring business has been put into production(Such as 聚美优品[1](Jumei),  浙江墨芷[2]&#010;(Mozhi) etc.).  According to the feedback we received, current documentation is not very friendly&#010;to PyFlink users. There are two shortcomings:&#010;&gt; &#010;&gt; - Python related content is mixed in the Java/Scala documentation, which makes it difficult&#010;for users who only focus on PyFlink to read.&#010;&gt; - There is already a \"Python Table API\" section in the Table API document to store PyFlink&#010;documents, but the number of articles is small and the content is fragmented. It is difficult&#010;for beginners to learn from it.&#010;&gt; &#010;&gt; In addition, FLIP-130 introduced the Python DataStream API. Many documents will be added&#010;for those new APIs. In order to increase the readability and maintainability of the PyFlink&#010;document, Wei Zhong and me have discussed offline and would like to rework it via this FLIP.&#010;&gt; &#010;&gt; We will rework the document around the following three objectives:&#010;&gt; &#010;&gt; - Add a separate section for Python API under the \"Application Development\" section.&#010;&gt; - Restructure current Python documentation to a brand new structure to ensure complete&#010;content and friendly to beginners.    &#010;&gt; - Improve the documents shared by Python/Java/Scala to make it more friendly to Python&#010;users and without affecting Java/Scala users.&#010;&gt; &#010;&gt; More detail can be found in the FLIP-133: https://cwiki.apache.org/confluence/display/FLINK/FLIP-133%3A+Rework+PyFlink+Documentation&#010;&lt;https://cwiki.apache.org/confluence/display/FLINK/FLIP-133%3A+Rework+PyFlink+Documentation&gt;&#010;&gt; &#010;&gt; Best,&#010;&gt; Jincheng&#010;&gt; &#010;&gt; [1] https://mp.weixin.qq.com/s/zVsBIs1ZEFe4atYUYtZpRg &lt;https://mp.weixin.qq.com/s/zVsBIs1ZEFe4atYUYtZpRg&gt;&#010;&gt; [2] https://mp.weixin.qq.com/s/R4p_a2TWGpESBWr3pLtM2g &lt;https://mp.weixin.qq.com/s/R4p_a2TWGpESBWr3pLtM2g&gt;&#010;&gt; &#010;&#010;&#010;",
+        "depth": "1",
+        "reply": "<CAJSjTKxeUdCWkP88sPR2GZ1y8=BaO+Y8eSR7wBQehtnRycaOFg@mail.gmail.com>"
+    },
+    {
+        "id": "<CAPxmL=Hm28_sWwJnp_OO9Gy8mgEwgh1ADAtNip34aUFQsWa=CA@mail.gmail.com>",
+        "from": "Xingbo Huang &lt;hxbks...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 03:35:09 GMT",
+        "subject": "Re: [DISCUSS] FLIP-133: Rework PyFlink Documentation",
+        "content": "Hi Jincheng,&#010;&#010;Thanks a lot for bringing up this discussion and the proposal.&#010;&#010;Big +1 for improving the structure of PyFlink doc.&#010;&#010;It will be very friendly to give PyFlink users a unified entrance to learn&#010;PyFlink documents.&#010;&#010;Best,&#010;Xingbo&#010;&#010;Dian Fu &lt;dian0511.fu@gmail.com&gt; 于2020年7月31日周五 上午11:00写道：&#010;&#010;&gt; Hi Jincheng,&#010;&gt;&#010;&gt; Thanks a lot for bringing up this discussion and the proposal. +1 to&#010;&gt; improve the Python API doc.&#010;&gt;&#010;&gt; I have received many feedbacks from PyFlink beginners about&#010;&gt; the PyFlink doc, e.g. the materials are too few, the Python doc is mixed&#010;&gt; with the Java doc and it's not easy to find the docs he wants to know.&#010;&gt;&#010;&gt; I think it would greatly improve the user experience if we can have one&#010;&gt; place which includes most knowledges PyFlink users should know.&#010;&gt;&#010;&gt; Regards,&#010;&gt; Dian&#010;&gt;&#010;&gt; 在 2020年7月31日，上午10:14，jincheng sun &lt;sunjincheng121@gmail.com&gt; 写道：&#010;&gt;&#010;&gt; Hi folks,&#010;&gt;&#010;&gt; Since the release of Flink 1.11, users of PyFlink have continued to grow.&#010;&gt; As far as I know there are many companies have used PyFlink for data&#010;&gt; analysis, operation and maintenance monitoring business has been put into&#010;&gt; production(Such as 聚美优品[1](Jumei),  浙江墨芷[2] (Mozhi) etc.).  According&#010;to&#010;&gt; the feedback we received, current documentation is not very friendly to&#010;&gt; PyFlink users. There are two shortcomings:&#010;&gt;&#010;&gt; - Python related content is mixed in the Java/Scala documentation, which&#010;&gt; makes it difficult for users who only focus on PyFlink to read.&#010;&gt; - There is already a \"Python Table API\" section in the Table API document&#010;&gt; to store PyFlink documents, but the number of articles is small and the&#010;&gt; content is fragmented. It is difficult for beginners to learn from it.&#010;&gt;&#010;&gt; In addition, FLIP-130 introduced the Python DataStream API. Many documents&#010;&gt; will be added for those new APIs. In order to increase the readability and&#010;&gt; maintainability of the PyFlink document, Wei Zhong and me have discussed&#010;&gt; offline and would like to rework it via this FLIP.&#010;&gt;&#010;&gt; We will rework the document around the following three objectives:&#010;&gt;&#010;&gt; - Add a separate section for Python API under the \"Application&#010;&gt; Development\" section.&#010;&gt; - Restructure current Python documentation to a brand new structure to&#010;&gt; ensure complete content and friendly to beginners.&#010;&gt; - Improve the documents shared by Python/Java/Scala to make it more&#010;&gt; friendly to Python users and without affecting Java/Scala users.&#010;&gt;&#010;&gt; More detail can be found in the FLIP-133:&#010;&gt; https://cwiki.apache.org/confluence/display/FLINK/FLIP-133%3A+Rework+PyFlink+Documentation&#010;&gt;&#010;&gt; Best,&#010;&gt; Jincheng&#010;&gt;&#010;&gt; [1] https://mp.weixin.qq.com/s/zVsBIs1ZEFe4atYUYtZpRg&#010;&gt; [2] https://mp.weixin.qq.com/s/R4p_a2TWGpESBWr3pLtM2g&#010;&gt;&#010;&gt;&#010;&gt;&#010;&#010;",
+        "depth": "2",
+        "reply": "<CAJSjTKxeUdCWkP88sPR2GZ1y8=BaO+Y8eSR7wBQehtnRycaOFg@mail.gmail.com>"
+    },
+    {
+        "id": "<60c2c093.4398.173a3ee27a4.Coremail.cxydevelop@163.com>",
+        "from": "chenxuying &lt;cxydeve...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 08:12:40 GMT",
+        "subject": "flinksql kafka 插入mysql 的insert语法问题和唯一主键的问题",
+        "content": "hi&#010;我使用的flink 1.11.0版本&#010;代码如下&#010;StreamExecutionEnvironment streamEnv = StreamExecutionEnvironment.getExecutionEnvironment();&#010;TableEnvironment tableEnvironment = StreamTableEnvironment.create(streamEnv);&#010;tableEnvironment.executeSql(\" \" +&#010;\" CREATE TABLE mySource ( \" +&#010;\"  a bigint, \" +&#010;\"  b bigint \" +&#010;\" ) WITH ( \" +&#010;\"  'connector.type' = 'kafka', \" +&#010;\"  'connector.version' = 'universal', \" +&#010;\"  'connector.topic' = 'mytesttopic', \" +&#010;\"  'connector.properties.zookeeper.connect' = '172.17.0.2:2181', \" +&#010;\"  'connector.properties.bootstrap.servers' = '172.17.0.2:9092', \" +&#010;\"  'connector.properties.group.id' = 'flink-test-cxy', \" +&#010;\"  'connector.startup-mode' = 'latest-offset', \" +&#010;\"  'format.type' = 'json' \" +&#010;\" ) \");&#010;tableEnvironment.executeSql(\"CREATE TABLE mysqlsink ( \" +&#010;\"     id bigint, \" +&#010;\"  game_id varchar, \" +&#010;\"  PRIMARY KEY (id) NOT ENFORCED      \" +&#010;\" )  \" +&#010;\" with ( \" +&#010;\"  'connector.type' = 'jdbc',   \" +&#010;\"  'connector.url' = 'jdbc:mysql://47.99.181.86:3306/flinksql?useSSL=false' , \" +&#010;\"  'connector.username' = 'root' , \" +&#010;\"  'connector.password' = 'root',  \" +&#010;\"  'connector.table' = 'mysqlsink' , \" +&#010;\"  'connector.driver' = 'com.mysql.cj.jdbc.Driver' , \" +&#010;\"  'connector.write.flush.interval' = '2s',  \" +&#010;\"  'connector.write.flush.max-rows' = '300'  \" +&#010;\" )\");&#010;tableEnvironment.executeSql(\"insert into mysqlsink (`id`,`game_id`) values (select a,cast(b&#010;as varchar) b from mySource)\");&#010;&#010;&#010;问题一 : 上面的insert语句会出现如下错误&#010;Caused by: org.apache.calcite.sql.validate.SqlValidatorException: Cannot apply '$SCALAR_QUERY'&#010;to arguments of type '$SCALAR_QUERY(&lt;RECORDTYPE(BIGINT A, VARCHAR(2147483647) B)&gt;)'.&#010;Supported form(s): '$SCALAR_QUERY(&lt;RECORDTYPE(SINGLE FIELD)&gt;)'&#010;&#010;&#010;问题二 : 如果insert改成 tableEnvironment.executeSql(\"insert into mysqlsink select a,cast(b&#010;as varchar) b from mySource\"); 是可以运行的,但是出现唯一主键重复时会报错&#010;Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key&#010;'PRIMARY'&#010;&#010;&#010;&#010;",
+        "depth": "0",
+        "reply": "<60c2c093.4398.173a3ee27a4.Coremail.cxydevelop@163.com>"
+    },
+    {
+        "id": "<tencent_4975046926FC53785FB51F6E3F2888078E09@qq.com>",
+        "from": "李奇 &lt;359502...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 08:25:23 GMT",
+        "subject": "Re: flinksql kafka 插入mysql 的insert语法问题和唯一主键的问题",
+        "content": "改成update模式，然后也可以修改唯一主键为自然键&#010;&#010;&gt; 在 2020年7月31日，下午4:13，chenxuying &lt;cxydevelop@163.com&gt; 写道：&#010;&gt; &#010;&gt; ﻿hi&#010;&gt; 我使用的flink 1.11.0版本&#010;&gt; 代码如下&#010;&gt; StreamExecutionEnvironment streamEnv = StreamExecutionEnvironment.getExecutionEnvironment();&#010;&gt; TableEnvironment tableEnvironment = StreamTableEnvironment.create(streamEnv);&#010;&gt; tableEnvironment.executeSql(\" \" +&#010;&gt; \" CREATE TABLE mySource ( \" +&#010;&gt; \"  a bigint, \" +&#010;&gt; \"  b bigint \" +&#010;&gt; \" ) WITH ( \" +&#010;&gt; \"  'connector.type' = 'kafka', \" +&#010;&gt; \"  'connector.version' = 'universal', \" +&#010;&gt; \"  'connector.topic' = 'mytesttopic', \" +&#010;&gt; \"  'connector.properties.zookeeper.connect' = '172.17.0.2:2181', \" +&#010;&gt; \"  'connector.properties.bootstrap.servers' = '172.17.0.2:9092', \" +&#010;&gt; \"  'connector.properties.group.id' = 'flink-test-cxy', \" +&#010;&gt; \"  'connector.startup-mode' = 'latest-offset', \" +&#010;&gt; \"  'format.type' = 'json' \" +&#010;&gt; \" ) \");&#010;&gt; tableEnvironment.executeSql(\"CREATE TABLE mysqlsink ( \" +&#010;&gt; \"     id bigint, \" +&#010;&gt; \"  game_id varchar, \" +&#010;&gt; \"  PRIMARY KEY (id) NOT ENFORCED      \" +&#010;&gt; \" )  \" +&#010;&gt; \" with ( \" +&#010;&gt; \"  'connector.type' = 'jdbc',   \" +&#010;&gt; \"  'connector.url' = 'jdbc:mysql://47.99.181.86:3306/flinksql?useSSL=false' , \" +&#010;&gt; \"  'connector.username' = 'root' , \" +&#010;&gt; \"  'connector.password' = 'root',  \" +&#010;&gt; \"  'connector.table' = 'mysqlsink' , \" +&#010;&gt; \"  'connector.driver' = 'com.mysql.cj.jdbc.Driver' , \" +&#010;&gt; \"  'connector.write.flush.interval' = '2s',  \" +&#010;&gt; \"  'connector.write.flush.max-rows' = '300'  \" +&#010;&gt; \" )\");&#010;&gt; tableEnvironment.executeSql(\"insert into mysqlsink (`id`,`game_id`) values (select a,cast(b&#010;as varchar) b from mySource)\");&#010;&gt; &#010;&gt; &#010;&gt; 问题一 : 上面的insert语句会出现如下错误&#010;&gt; Caused by: org.apache.calcite.sql.validate.SqlValidatorException: Cannot apply '$SCALAR_QUERY'&#010;to arguments of type '$SCALAR_QUERY(&lt;RECORDTYPE(BIGINT A, VARCHAR(2147483647) B)&gt;)'.&#010;Supported form(s): '$SCALAR_QUERY(&lt;RECORDTYPE(SINGLE FIELD)&gt;)'&#010;&gt; &#010;&gt; &#010;&gt; 问题二 : 如果insert改成 tableEnvironment.executeSql(\"insert into mysqlsink select&#010;a,cast(b as varchar) b from mySource\"); 是可以运行的,但是出现唯一主键重复时会报错&#010;&gt; Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for&#010;key 'PRIMARY'&#010;&gt; &#010;&gt; &#010;&gt; &#010;&#010;&#010;",
+        "depth": "1",
+        "reply": "<60c2c093.4398.173a3ee27a4.Coremail.cxydevelop@163.com>"
+    },
+    {
+        "id": "<8EBCE5ED-5BCC-4B38-8441-886161967780@gmail.com>",
+        "from": "Leonard Xu &lt;xbjt...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 08:46:41 GMT",
+        "subject": "Re: flinksql kafka 插入mysql 的insert语法问题和唯一主键的问题",
+        "content": "Hi, chenxuying&#010;&#010;看你还是用的还是 \"  'connector.type' = 'jdbc', ….  \" ，这是老的option，使用老的option参数还是需要根据query推导主键，&#010;需要使用新的属性[1]：\" 'connector' = 'jdbc’,….\" 才能配合 主键 决定 upsert&#010;模式.&#010; &#010;Best&#010;Leonard&#010;[1] https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/dev/table/connectors/jdbc.html#connector-options&#010;&lt;https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/dev/table/connectors/jdbc.html#connector-options&gt;&#010;&#010;&gt; 在 2020年7月31日，16:12，chenxuying &lt;cxydevelop@163.com&gt; 写道：&#010;&gt; &#010;&gt; hi&#010;&gt; 我使用的flink 1.11.0版本&#010;&gt; 代码如下&#010;&gt; StreamExecutionEnvironment streamEnv = StreamExecutionEnvironment.getExecutionEnvironment();&#010;&gt; TableEnvironment tableEnvironment = StreamTableEnvironment.create(streamEnv);&#010;&gt; tableEnvironment.executeSql(\" \" +&#010;&gt; \" CREATE TABLE mySource ( \" +&#010;&gt; \"  a bigint, \" +&#010;&gt; \"  b bigint \" +&#010;&gt; \" ) WITH ( \" +&#010;&gt; \"  'connector.type' = 'kafka', \" +&#010;&gt; \"  'connector.version' = 'universal', \" +&#010;&gt; \"  'connector.topic' = 'mytesttopic', \" +&#010;&gt; \"  'connector.properties.zookeeper.connect' = '172.17.0.2:2181', \" +&#010;&gt; \"  'connector.properties.bootstrap.servers' = '172.17.0.2:9092', \" +&#010;&gt; \"  'connector.properties.group.id' = 'flink-test-cxy', \" +&#010;&gt; \"  'connector.startup-mode' = 'latest-offset', \" +&#010;&gt; \"  'format.type' = 'json' \" +&#010;&gt; \" ) \");&#010;&gt; tableEnvironment.executeSql(\"CREATE TABLE mysqlsink ( \" +&#010;&gt; \"     id bigint, \" +&#010;&gt; \"  game_id varchar, \" +&#010;&gt; \"  PRIMARY KEY (id) NOT ENFORCED      \" +&#010;&gt; \" )  \" +&#010;&gt; \" with ( \" +&#010;&gt; \"  'connector.type' = 'jdbc',   \" +&#010;&gt; \"  'connector.url' = 'jdbc:mysql://47.99.181.86:3306/flinksql?useSSL=false' , \" +&#010;&gt; \"  'connector.username' = 'root' , \" +&#010;&gt; \"  'connector.password' = 'root',  \" +&#010;&gt; \"  'connector.table' = 'mysqlsink' , \" +&#010;&gt; \"  'connector.driver' = 'com.mysql.cj.jdbc.Driver' , \" +&#010;&gt; \"  'connector.write.flush.interval' = '2s',  \" +&#010;&gt; \"  'connector.write.flush.max-rows' = '300'  \" +&#010;&gt; \" )\");&#010;&gt; tableEnvironment.executeSql(\"insert into mysqlsink (`id`,`game_id`) values (select a,cast(b&#010;as varchar) b from mySource)\");&#010;&gt; &#010;&gt; &#010;&gt; 问题一 : 上面的insert语句会出现如下错误&#010;&gt; Caused by: org.apache.calcite.sql.validate.SqlValidatorException: Cannot apply '$SCALAR_QUERY'&#010;to arguments of type '$SCALAR_QUERY(&lt;RECORDTYPE(BIGINT A, VARCHAR(2147483647) B)&gt;)'.&#010;Supported form(s): '$SCALAR_QUERY(&lt;RECORDTYPE(SINGLE FIELD)&gt;)'&#010;&gt; &#010;&gt; &#010;&gt; 问题二 : 如果insert改成 tableEnvironment.executeSql(\"insert into mysqlsink select&#010;a,cast(b as varchar) b from mySource\"); 是可以运行的,但是出现唯一主键重复时会报错&#010;&gt; Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for&#010;key 'PRIMARY'&#010;&gt; &#010;&gt; &#010;&gt; &#010;&#010;&#010;",
+        "depth": "1",
+        "reply": "<60c2c093.4398.173a3ee27a4.Coremail.cxydevelop@163.com>"
+    },
+    {
+        "id": "<3fc99dad.6298.173a501806a.Coremail.cxydevelop@163.com>",
+        "from": "chenxuying  &lt;cxydeve...@163.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 13:13:25 GMT",
+        "subject": "Re:Re: flinksql kafka 插入mysql 的insert语法问题和唯一主键的问题",
+        "content": "谢谢回答&#010;使用新属性可以 成功修改记录 ,&#010;但是不太明白 \"使用老的option参数还是需要根据query推导主键\" 这里话是什么意思,需要怎么做&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;&#010;在 2020-07-31 16:46:41，\"Leonard Xu\" &lt;xbjtdcq@gmail.com&gt; 写道：&#010;&gt;Hi, chenxuying&#010;&gt;&#010;&gt;看你还是用的还是 \"  'connector.type' = 'jdbc', ….  \" ，这是老的option，使用老的option参数还是需要根据query推导主键，&#010;&gt;需要使用新的属性[1]：\" 'connector' = 'jdbc’,….\" 才能配合 主键 决定&#010;upsert 模式.&#010;&gt; &#010;&gt;Best&#010;&gt;Leonard&#010;&gt;[1] https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/dev/table/connectors/jdbc.html#connector-options&#010;&lt;https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/dev/table/connectors/jdbc.html#connector-options&gt;&#010;&gt;&#010;&gt;&gt; 在 2020年7月31日，16:12，chenxuying &lt;cxydevelop@163.com&gt; 写道：&#010;&gt;&gt; &#010;&gt;&gt; hi&#010;&gt;&gt; 我使用的flink 1.11.0版本&#010;&gt;&gt; 代码如下&#010;&gt;&gt; StreamExecutionEnvironment streamEnv = StreamExecutionEnvironment.getExecutionEnvironment();&#010;&gt;&gt; TableEnvironment tableEnvironment = StreamTableEnvironment.create(streamEnv);&#010;&gt;&gt; tableEnvironment.executeSql(\" \" +&#010;&gt;&gt; \" CREATE TABLE mySource ( \" +&#010;&gt;&gt; \"  a bigint, \" +&#010;&gt;&gt; \"  b bigint \" +&#010;&gt;&gt; \" ) WITH ( \" +&#010;&gt;&gt; \"  'connector.type' = 'kafka', \" +&#010;&gt;&gt; \"  'connector.version' = 'universal', \" +&#010;&gt;&gt; \"  'connector.topic' = 'mytesttopic', \" +&#010;&gt;&gt; \"  'connector.properties.zookeeper.connect' = '172.17.0.2:2181', \" +&#010;&gt;&gt; \"  'connector.properties.bootstrap.servers' = '172.17.0.2:9092', \" +&#010;&gt;&gt; \"  'connector.properties.group.id' = 'flink-test-cxy', \" +&#010;&gt;&gt; \"  'connector.startup-mode' = 'latest-offset', \" +&#010;&gt;&gt; \"  'format.type' = 'json' \" +&#010;&gt;&gt; \" ) \");&#010;&gt;&gt; tableEnvironment.executeSql(\"CREATE TABLE mysqlsink ( \" +&#010;&gt;&gt; \"     id bigint, \" +&#010;&gt;&gt; \"  game_id varchar, \" +&#010;&gt;&gt; \"  PRIMARY KEY (id) NOT ENFORCED      \" +&#010;&gt;&gt; \" )  \" +&#010;&gt;&gt; \" with ( \" +&#010;&gt;&gt; \"  'connector.type' = 'jdbc',   \" +&#010;&gt;&gt; \"  'connector.url' = 'jdbc:mysql://47.99.181.86:3306/flinksql?useSSL=false' , \" +&#010;&gt;&gt; \"  'connector.username' = 'root' , \" +&#010;&gt;&gt; \"  'connector.password' = 'root',  \" +&#010;&gt;&gt; \"  'connector.table' = 'mysqlsink' , \" +&#010;&gt;&gt; \"  'connector.driver' = 'com.mysql.cj.jdbc.Driver' , \" +&#010;&gt;&gt; \"  'connector.write.flush.interval' = '2s',  \" +&#010;&gt;&gt; \"  'connector.write.flush.max-rows' = '300'  \" +&#010;&gt;&gt; \" )\");&#010;&gt;&gt; tableEnvironment.executeSql(\"insert into mysqlsink (`id`,`game_id`) values (select&#010;a,cast(b as varchar) b from mySource)\");&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; 问题一 : 上面的insert语句会出现如下错误&#010;&gt;&gt; Caused by: org.apache.calcite.sql.validate.SqlValidatorException: Cannot apply '$SCALAR_QUERY'&#010;to arguments of type '$SCALAR_QUERY(&lt;RECORDTYPE(BIGINT A, VARCHAR(2147483647) B)&gt;)'.&#010;Supported form(s): '$SCALAR_QUERY(&lt;RECORDTYPE(SINGLE FIELD)&gt;)'&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; 问题二 : 如果insert改成 tableEnvironment.executeSql(\"insert into mysqlsink&#010;select a,cast(b as varchar) b from mySource\"); 是可以运行的,但是出现唯一主键重复时会报错&#010;&gt;&gt; Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1'&#010;for key 'PRIMARY'&#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&gt; &#010;&gt;&#010;",
+        "depth": "2",
+        "reply": "<60c2c093.4398.173a3ee27a4.Coremail.cxydevelop@163.com>"
+    },
+    {
+        "id": "<B4442287-6518-4985-B30F-1342F8D92641@gmail.com>",
+        "from": "Leonard Xu &lt;xbjt...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 13:27:02 GMT",
+        "subject": "Re: flinksql kafka 插入mysql 的insert语法问题和唯一主键的问题",
+        "content": "Hello&#010;&#010;&gt; 在 2020年7月31日，21:13，chenxuying &lt;cxydevelop@163.com&gt; 写道：&#010;&gt; &#010;&gt; 但是不太明白 \"使用老的option参数还是需要根据query推导主键\" 这里话是什么意思,需要怎么做&#010;&#010;简单来讲，如果使用的是老版本(1.10)的option参数，代码执行的路径就和1.10版本一样的，1.10版本里是不支持定义&#010;PRIMARY KEY 的，&#010;是通过用户的query来决定写入的模式是upsert 还是 append ,  你可以看下1.10的文档关于用query&#010;推导 写入模式的文档[1], 如果已经在用1.11了，1.10的文档可以不用看的。&#010; &#010;在1.10里经常出现query 推导不出 key 导致无法做upsert写入的case, 在1.11里通过支持定义&#010;PRIMARY KEY，不会再有类似问题.1.11的文档参考[2]。&#010;&#010;祝好&#010;Leonard&#010;&#010;[1] https://ci.apache.org/projects/flink/flink-docs-master/dev/table/connect.html#jdbc-connector&#010;&lt;https://ci.apache.org/projects/flink/flink-docs-master/dev/table/connect.html#jdbc-connector&gt;&#010;[2] https://ci.apache.org/projects/flink/flink-docs-master/dev/table/connectors/jdbc.html#how-to-create-a-jdbc-table&#010;&lt;https://ci.apache.org/projects/flink/flink-docs-master/dev/table/connectors/jdbc.html#how-to-create-a-jdbc-table&gt;&#010;",
+        "depth": "3",
+        "reply": "<60c2c093.4398.173a3ee27a4.Coremail.cxydevelop@163.com>"
+    },
+    {
+        "id": "<CAE4Md6n8jA+oGC1oYDwvxuusK3uACKyYph9Tg6ru6sogdoO1cA@mail.gmail.com>",
+        "from": "jun su &lt;sujun891...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 08:37:18 GMT",
+        "subject": "RocksDBKeyedStateBackend如何写磁盘",
+        "content": "hi all,&#013;&#010;&#013;&#010;请问RocksDBKeyedStateBackend是何时将state序列化到磁盘的, 窗口结束时间？还是配置的checkpoint周期，谢谢&#013;&#010;&#013;&#010;-- &#013;&#010;Best,&#013;&#010;Jun Su&#013;&#010;",
+        "depth": "0",
+        "reply": "<CAE4Md6n8jA+oGC1oYDwvxuusK3uACKyYph9Tg6ru6sogdoO1cA@mail.gmail.com>"
+    },
+    {
+        "id": "<tencent_BCF1128192059E2B94261715A1D38F465E06@qq.com>",
+        "from": "&quot;jiafu&quot; &lt;530496...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 08:40:36 GMT",
+        "subject": "回复：RocksDBKeyedStateBackend如何写磁盘",
+        "content": "writerbuffer写满会flush到磁盘，checkpoint启动的时候会有一次snapshot过程，会让rocksdb做checkpoint，然后将数据刷到磁盘形成sst文件。&#013;&#010;&#013;&#010;&#013;&#010;&#013;&#010;&#013;&#010;------------------&amp;nbsp;原始邮件&amp;nbsp;------------------&#013;&#010;发件人:                                                                               &#010;                                        \"user-zh\"                                        &#010;                                           &lt;sujun891020@gmail.com&amp;gt;;&#013;&#010;发送时间:&amp;nbsp;2020年7月31日(星期五) 下午4:37&#013;&#010;收件人:&amp;nbsp;\"user-zh\"&lt;user-zh@flink.apache.org&amp;gt;;&#013;&#010;&#013;&#010;主题:&amp;nbsp;RocksDBKeyedStateBackend如何写磁盘&#013;&#010;&#013;&#010;&#013;&#010;&#013;&#010;hi all,&#013;&#010;&#013;&#010;请问RocksDBKeyedStateBackend是何时将state序列化到磁盘的, 窗口结束时间？还是配置的checkpoint周期，谢谢&#013;&#010;&#013;&#010;-- &#013;&#010;Best,&#013;&#010;Jun Su",
+        "depth": "1",
+        "reply": "<CAE4Md6n8jA+oGC1oYDwvxuusK3uACKyYph9Tg6ru6sogdoO1cA@mail.gmail.com>"
+    },
+    {
+        "id": "<CAE4Md6mxb7SnieKGZktTxB+G-3oZj1p8swTfca1+7SjqZEZs8Q@mail.gmail.com>",
+        "from": "jun su &lt;sujun891...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 08:56:43 GMT",
+        "subject": "Re: RocksDBKeyedStateBackend如何写磁盘",
+        "content": "hi,&#013;&#010;&#013;&#010;看到 RocksDBWriteBatchWrapper类有 flushIfNeeded()方法 ， 是这个么？&#013;&#010;&#013;&#010; private void flushIfNeeded() throws RocksDBException {&#013;&#010;boolean needFlush = batch.count() == capacity || (batchSize &gt; 0 &amp;&amp;&#013;&#010;getDataSize() &gt;= batchSize);&#013;&#010;if (needFlush) {&#013;&#010;flush();&#013;&#010;}&#013;&#010;}&#013;&#010;&#013;&#010;batchSize 来自 state.backend.rocksdb.write-batch-size 参数的配置&#013;&#010;&#013;&#010;jiafu &lt;530496628@qq.com&gt; 于2020年7月31日周五 下午4:41写道：&#013;&#010;&#013;&#010;&gt;&#013;&#010;&gt; writerbuffer写满会flush到磁盘，checkpoint启动的时候会有一次snapshot过程，会让rocksdb做checkpoint，然后将数据刷到磁盘形成sst文件。&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&gt; ------------------&amp;nbsp;原始邮件&amp;nbsp;------------------&#013;&#010;&gt; 发件人:&#013;&#010;&gt;                                                   \"user-zh\"&#013;&#010;&gt;                                                                     &lt;&#013;&#010;&gt; sujun891020@gmail.com&amp;gt;;&#013;&#010;&gt; 发送时间:&amp;nbsp;2020年7月31日(星期五) 下午4:37&#013;&#010;&gt; 收件人:&amp;nbsp;\"user-zh\"&lt;user-zh@flink.apache.org&amp;gt;;&#013;&#010;&gt;&#013;&#010;&gt; 主题:&amp;nbsp;RocksDBKeyedStateBackend如何写磁盘&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&gt;&#013;&#010;&gt; hi all,&#013;&#010;&gt;&#013;&#010;&gt; 请问RocksDBKeyedStateBackend是何时将state序列化到磁盘的, 窗口结束时间？还是配置的checkpoint周期，谢谢&#013;&#010;&gt;&#013;&#010;&gt; --&#013;&#010;&gt; Best,&#013;&#010;&gt; Jun Su&#013;&#010;&#013;&#010;&#013;&#010;&#013;&#010;-- &#013;&#010;Best,&#013;&#010;Jun Su&#013;&#010;",
+        "depth": "2",
+        "reply": "<CAE4Md6n8jA+oGC1oYDwvxuusK3uACKyYph9Tg6ru6sogdoO1cA@mail.gmail.com>"
+    },
+    {
+        "id": "<CAJkeMpi=gfpWpy7nswMHGB0jjzXjkxkQPaK90vyy2JXzhgP6iw@mail.gmail.com>",
+        "from": "zilong xiao &lt;acidzz...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 12:12:20 GMT",
+        "subject": "Flink sql 转义字符问题",
+        "content": "SPLIT_INDEX(${xxx}, ';',&#013;&#010;0)，想从字符串中按分号切割，可是分号应该是特殊字符，语法检查总是不能通过，网上查说是可以转义，但是也没太搞懂怎么才能转义，有遇到过类似问题的大佬求指点~~&#013;&#010;",
+        "depth": "0",
+        "reply": "<CAJkeMpi=gfpWpy7nswMHGB0jjzXjkxkQPaK90vyy2JXzhgP6iw@mail.gmail.com>"
+    },
+    {
+        "id": "<tencent_18EAF0D120FBFBF38A6883DC8651E40C980A@qq.com>",
+        "from": "李奇 &lt;359502...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 12:24:47 GMT",
+        "subject": "Re: Flink sql 转义字符问题",
+        "content": "加反斜杠就可以。\\;  只不过分号应该不是特殊字符吧。&#013;&#010;&#013;&#010;&gt; 在 2020年7月31日，下午8:13，zilong xiao &lt;acidzz163@gmail.com&gt; 写道：&#013;&#010;&gt; &#013;&#010;&gt; ﻿SPLIT_INDEX(${xxx}, ';',&#013;&#010;&gt; 0)，想从字符串中按分号切割，可是分号应该是特殊字符，语法检查总是不能通过，网上查说是可以转义，但是也没太搞懂怎么才能转义，有遇到过类似问题的大佬求指点~~&#013;&#010;",
+        "depth": "1",
+        "reply": "<CAJkeMpi=gfpWpy7nswMHGB0jjzXjkxkQPaK90vyy2JXzhgP6iw@mail.gmail.com>"
+    },
+    {
+        "id": "<CAJkeMpjeV25eFGyQdhvz_LYQqWkvMsWanLHrWGQxzoM2SWEE8w@mail.gmail.com>",
+        "from": "zilong xiao &lt;acidzz...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 12:26:32 GMT",
+        "subject": "Re: Flink sql 转义字符问题",
+        "content": "实测反斜杠好像也不行&#013;&#010;&#013;&#010;李奇 &lt;359502980@qq.com&gt; 于2020年7月31日周五 下午8:25写道：&#013;&#010;&#013;&#010;&gt; 加反斜杠就可以。\\;  只不过分号应该不是特殊字符吧。&#013;&#010;&gt;&#013;&#010;&gt; &gt; 在 2020年7月31日，下午8:13，zilong xiao &lt;acidzz163@gmail.com&gt; 写道：&#013;&#010;&gt; &gt;&#013;&#010;&gt; &gt; ﻿SPLIT_INDEX(${xxx}, ';',&#013;&#010;&gt; &gt;&#013;&#010;&gt; 0)，想从字符串中按分号切割，可是分号应该是特殊字符，语法检查总是不能通过，网上查说是可以转义，但是也没太搞懂怎么才能转义，有遇到过类似问题的大佬求指点~~&#013;&#010;&gt;&#013;&#010;",
+        "depth": "2",
+        "reply": "<CAJkeMpi=gfpWpy7nswMHGB0jjzXjkxkQPaK90vyy2JXzhgP6iw@mail.gmail.com>"
+    },
+    {
+        "id": "<CAJkeMpgz=_E3Qs-CoaP4nmZsowVFYa1rY5mJDR3iz=yUqoU+zA@mail.gmail.com>",
+        "from": "zilong xiao &lt;acidzz...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 12:46:38 GMT",
+        "subject": "Re: Flink sql 转义字符问题",
+        "content": "U&amp;'\\003B'  这么写就可以了 感觉好奇怪啊。。&#013;&#010;&#013;&#010;李奇 &lt;359502980@qq.com&gt; 于2020年7月31日周五 下午8:25写道：&#013;&#010;&#013;&#010;&gt; 加反斜杠就可以。\\;  只不过分号应该不是特殊字符吧。&#013;&#010;&gt;&#013;&#010;&gt; &gt; 在 2020年7月31日，下午8:13，zilong xiao &lt;acidzz163@gmail.com&gt; 写道：&#013;&#010;&gt; &gt;&#013;&#010;&gt; &gt; ﻿SPLIT_INDEX(${xxx}, ';',&#013;&#010;&gt; &gt;&#013;&#010;&gt; 0)，想从字符串中按分号切割，可是分号应该是特殊字符，语法检查总是不能通过，网上查说是可以转义，但是也没太搞懂怎么才能转义，有遇到过类似问题的大佬求指点~~&#013;&#010;&gt;&#013;&#010;",
+        "depth": "2",
+        "reply": "<CAJkeMpi=gfpWpy7nswMHGB0jjzXjkxkQPaK90vyy2JXzhgP6iw@mail.gmail.com>"
+    },
+    {
+        "id": "<tencent_2950463A2928D2609DEB7284321D106F9C08@qq.com>",
+        "from": "&quot;Hannan Kan&quot; &lt;hannan...@foxmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 13:03:51 GMT",
+        "subject": "回复： Flink sql 转义字符问题",
+        "content": "我看官方文档https://help.aliyun.com/knowledge_detail/62544.html&amp;nbsp;中接口是VARCHAR&#010;SPLIT_INDEX(VARCHAR str, VARCHAR sep, INT index)&#013;&#010;sep 是字符串类型。是不是要用双引号或者看下分号是不是英文的？&#013;&#010;&#013;&#010;&#013;&#010;------------------&amp;nbsp;原始邮件&amp;nbsp;------------------&#013;&#010;发件人:                                                                               &#010;                                        \"user-zh\"                                        &#010;                                           &lt;acidzz163@gmail.com&amp;gt;;&#013;&#010;发送时间:&amp;nbsp;2020年7月31日(星期五) 晚上8:46&#013;&#010;收件人:&amp;nbsp;\"user-zh\"&lt;user-zh@flink.apache.org&amp;gt;;&#013;&#010;&#013;&#010;主题:&amp;nbsp;Re: Flink sql 转义字符问题&#013;&#010;&#013;&#010;&#013;&#010;&#013;&#010;U&amp;amp;'\\003B'&amp;nbsp; 这么写就可以了 感觉好奇怪啊。。&#013;&#010;&#013;&#010;李奇 &lt;359502980@qq.com&amp;gt; 于2020年7月31日周五 下午8:25写道：&#013;&#010;&#013;&#010;&amp;gt; 加反斜杠就可以。\\;&amp;nbsp; 只不过分号应该不是特殊字符吧。&#013;&#010;&amp;gt;&#013;&#010;&amp;gt; &amp;gt; 在 2020年7月31日，下午8:13，zilong xiao &lt;acidzz163@gmail.com&amp;gt;&#010;写道：&#013;&#010;&amp;gt; &amp;gt;&#013;&#010;&amp;gt; &amp;gt; ﻿SPLIT_INDEX(${xxx}, ';',&#013;&#010;&amp;gt; &amp;gt;&#013;&#010;&amp;gt; 0)，想从字符串中按分号切割，可是分号应该是特殊字符，语法检查总是不能通过，网上查说是可以转义，但是也没太搞懂怎么才能转义，有遇到过类似问题的大佬求指点~~&#013;&#010;&amp;gt;",
+        "depth": "3",
+        "reply": "<CAJkeMpi=gfpWpy7nswMHGB0jjzXjkxkQPaK90vyy2JXzhgP6iw@mail.gmail.com>"
+    },
+    {
+        "id": "<6AD6DFB1-B3D1-4358-9F3B-E76C2BC1C855@gmail.com>",
+        "from": "Leonard Xu &lt;xbjt...@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 13:10:48 GMT",
+        "subject": "Re: Flink sql 转义字符问题",
+        "content": "Hi, zilong&#013;&#010;&#013;&#010;SPLIT_INDEX(${xxx}, ‘;’, 0)&#013;&#010;&#013;&#010; ‘;’ 分号不是特殊字符，编译时应该不会报错的，我在Flink 1.11.1 用DDL&#010;测试了下, 能够work的，不知道你的环境是怎样的。&#013;&#010;  U&amp;'\\003B'  是 ; 的 unicode编码，所以用这个unicode编码是可以的，但一般这种用法是在需要用不可见字符分割时我们这样使用，&#013;&#010;  比如 \\n 对应的s是 U&amp;'\\\\000A’ ，\\r 对应的是 U&amp;'\\\\000D’, 对于分号这种可见字符来讲，不需要用unicode编码就可以的。&#013;&#010;&#013;&#010;祝好&#013;&#010;Leonard &#013;&#010;&#013;&#010;&gt; 在 2020年7月31日，20:46，zilong xiao &lt;acidzz163@gmail.com&gt; 写道：&#013;&#010;&gt; &#013;&#010;&gt; U&amp;'\\003B'  这么写就可以了 感觉好奇怪啊。。&#013;&#010;&gt; &#013;&#010;&gt; 李奇 &lt;359502980@qq.com&gt; 于2020年7月31日周五 下午8:25写道：&#013;&#010;&gt; &#013;&#010;&gt;&gt; 加反斜杠就可以。\\;  只不过分号应该不是特殊字符吧。&#013;&#010;&gt;&gt; &#013;&#010;&gt;&gt;&gt; 在 2020年7月31日，下午8:13，zilong xiao &lt;acidzz163@gmail.com&gt; 写道：&#013;&#010;&gt;&gt;&gt; &#013;&#010;&gt;&gt;&gt; ﻿SPLIT_INDEX(${xxx}, ';',&#013;&#010;&gt;&gt;&gt; &#013;&#010;&gt;&gt; 0)，想从字符串中按分号切割，可是分号应该是特殊字符，语法检查总是不能通过，网上查说是可以转义，但是也没太搞懂怎么才能转义，有遇到过类似问题的大佬求指点~~&#013;&#010;&gt;&gt; &#013;&#010;&#013;&#010;",
+        "depth": "3",
+        "reply": "<CAJkeMpi=gfpWpy7nswMHGB0jjzXjkxkQPaK90vyy2JXzhgP6iw@mail.gmail.com>"
+    },
+    {
+        "id": "<1596205624936-0.post@n8.nabble.com>",
+        "from": "stephenlee &lt;871826...@qq.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 14:27:04 GMT",
+        "subject": "pyflink 消费kafka protobuf数据",
+        "content": "hi，各位大佬好：&#013;&#010;我是flink新手，我想问一下如何使用pyflink 消费kafka protobuf数据？我试了当做string&#010;读取没有成功，查了下官方的pyflink文档，没有找到相关资料。还望大佬们帮忙看看&#010;&#010;&#010;&#013;&#010;--&#013;&#010;Sent from: http://apache-flink.147419.n8.nabble.com/",
+        "depth": "0",
+        "reply": "<1596205624936-0.post@n8.nabble.com>"
+    },
+    {
+        "id": "<CANWTSLBqOvXZjiNq1uDxa5QVvwjjRAaFFsj+cfwG95HNPvJ7bQ@mail.gmail.com>",
+        "from": "Eleanore Jin &lt;eleanore....@gmail.com&gt;",
+        "to": "user-zh@flink.apache.org",
+        "date": "Fri, 31 Jul 2020 16:20:55 GMT",
+        "subject": "Behavior for flink job running on K8S failed after restart strategy exhausted",
+        "content": "Hi Experts,&#010;&#010;I have a flink cluster (per job mode) running on kubernetes. The job is&#010;configured with restart strategy&#010;&#010;restart-strategy.fixed-delay.attempts: 3restart-strategy.fixed-delay.delay: 10 s&#010;&#010;&#010;So after 3 times retry, the job will be marked as FAILED, hence the pods&#010;are not running. However, kubernetes will then restart the job again as the&#010;available replicas do not match the desired one.&#010;&#010;I wonder what are the suggestions for such a scenario? How should I&#010;configure the flink job running on k8s?&#010;&#010;Thanks a lot!&#010;Eleanore&#010;&#010;",
+        "depth": "0",
+        "reply": "<CANWTSLBqOvXZjiNq1uDxa5QVvwjjRAaFFsj+cfwG95HNPvJ7bQ@mail.gmail.com>"
+    }
+]

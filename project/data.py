@@ -77,7 +77,8 @@ class Project:
                     pageMails.append(mail)
                 except UnicodeDecodeError:
                     pass
-        return pageMails
+
+        return {str(page): pageMails}
 
     def getMonthDataMultiProcess(self, month):
         # get total page nums
@@ -96,9 +97,11 @@ class Project:
         p.close()
         p.join()
 
-        mails = []
+        mails = {}
         for a in ans:
-            mails.append(a.get())
+            tmp = a.get()
+            p = list(tmp.keys())[0]
+            mails[p] = tmp[p]
         return mails
 
 
@@ -107,7 +110,7 @@ if __name__ == '__main__':
     start = datetime.now()
     res = pro.getMonthDataMultiProcess('202007')
     end = datetime.now()
-    print((end-start).seconds)
-    with open("202007.json", "w") as f:
-        f.write(json.dumps(res, ensure_ascii=False, indent=4))
+    for r in list(res.keys()):
+        with open('202007-' + r + ".json", "w", encoding='utf8') as f:
+            f.write(json.dumps(res[r], indent=4, ensure_ascii=False))
 
